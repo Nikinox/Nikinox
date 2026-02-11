@@ -3,8 +3,7 @@ from random import randint
 
 print('Insert your name so BauGPT can chat with you')
 name = input()
-if "gianmaria" in name.lower():
-    print("Ciao Padrone!")  
+
 else:   
     print("Hi " +name+"!Nice to meet you")
 
