@@ -7,9 +7,10 @@ the python library random
 
 Features
 You insert your name, and then you chat with this "Dog".
-He always says "bau" or "BAU" but for some words like "cat" or "bad dog" he will answer also with some other ouput
+He always says "bau" or "BAU" but for some words like "cat" or "food" he will answer also with some other ouput
 
 The process
+It all started as a scrypt that only respons bau  for like 999 times, then i started to insert the ability to react to the word "cat", and finally the project became what it became.
 
 What I learned
 I learned to manage inputs
