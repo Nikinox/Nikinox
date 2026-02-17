@@ -2,32 +2,28 @@ from random import randint
 
 print('Welcome to ROCKPAPERSCISSOR!')
 
-while True:
-    print('-------------------------------------')
-    print('enter 1 to play; 0 to exit')
+print('-------------------------------------')
+print('enter 1 to play; 0 to exit')
+c = int(input())
+
+while c not in (0, 1):
+    print("insert a valid answer")
     c = int(input())
 
-    if c == 0:
-        print('thanks for playing')
-        break
-
-    if c != 1:
-        print('ERROR! Insert 1 or 0')
-        continue
-
-    # Gioco
+while c == 1:   # ciclo principale del gioco
+    # Game
     print('SELECT YOUR CHOICE: rock, paper, scissor')
     x = input().lower()
 
-    if x not in ("rock", "paper", "scissor"):
-        print("That's not a valid play. Check your spelling!")
-        continue
+    while x not in ("rock", "paper", "scissor"):
+        print("insert a valid choice")
+        x = input().lower()
 
     y = randint(0, 2)
     cpu_move = ["rock", "paper", "scissor"][y]
     print("computer move is", cpu_move)
 
-    # Risultati
+    # Results
     if x == cpu_move:
         print("Result = TIE")
     elif (x == "rock" and cpu_move == "scissor") or \
@@ -36,3 +32,15 @@ while True:
         print("Result = YOU WON")
     else:
         print("Result = CPU WON")
+
+    print('-------------------------------------')
+    print('enter 1 to play; 0 to exit')
+    c = int(input())
+
+    while c not in (0, 1):
+        print("insert a valid answer")
+        c = int(input())
+
+    if c == 0:
+        print("thanks for playing")
+        break
