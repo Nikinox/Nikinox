@@ -1,5 +1,6 @@
 Intro
 
+
 This is a script that shifts the letters of a string.
 
 It can switch every letter to the next one and do the opposite, maybe someone sent you a message with strange letters and you want to try to "translate" it into a more readable text.
