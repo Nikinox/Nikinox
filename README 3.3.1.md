@@ -5,7 +5,7 @@ I'm currently focused on creating as many projects as I can to learn, improve, a
 
 🖥️ Tools  
 I mainly work with Python 3.8, and I often prototype small ideas in lightweight online environments before turning them into proper projects.
-I use Notepad++ as my main code editor, and Google Colab when experimenting with small machine learning programs.
+I use Notepad++ as my main code editor even if I think I'm going to switch to VS Code 1.70.2 as it's one of the last versions supported on my pc, and Google Colab when experimenting with small machine learning programs.
 
 🚀 Mindset  
 My goal is simple: keep building, keep learning, and keep improving.
