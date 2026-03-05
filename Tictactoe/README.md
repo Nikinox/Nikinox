@@ -8,7 +8,7 @@ Python
 
 Features
 
-It just the classic game.
+It's just the classic game.
 
 What could be improved
 
