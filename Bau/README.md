@@ -11,7 +11,7 @@ the python library random
 Features
 
 You insert your name, and then you chat with this "Dog".
-He always says "bau" or "BAU" but for some words like "cat" or "food" he will answer also with some other ouput
+He will always say "bau" or "BAU" but for some words like "cat" or "food" he will answer also with some other ouput
 
 
 The process
