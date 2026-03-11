@@ -6,7 +6,7 @@ I think I will try to build an app that recognizes dog breeds or an AI classific
 
 🖥️ Tools  
 I mainly work with Python, and I often prototype small ideas in lightweight online environments before turning them into proper projects.
-I use Geany as my main code editor because it's fast and lightweight, and Google Colab when experimenting with small machine learning programs.
+I use Visual Studio Code as my main code editor, and Google Colab when experimenting with small machine learning programs.
 
 🚀 Mindset  
 My goal is simple: keep building, keep learning, and keep improving.
