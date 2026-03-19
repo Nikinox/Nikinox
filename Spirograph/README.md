@@ -3,8 +3,7 @@ This is a script that when runned shows a drawing that at the end shows multiple
 It's just a funny way to experiment with the library turtle.
 
 Technologies
-Python: tkinter
-        turtle
+Python: turtle
 
 Features
 You run it and watch the draw appearing.
