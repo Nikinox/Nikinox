@@ -1,0 +1,6 @@
+text_file=[]
+while True:
+    text_raw=text_file.append(str(input()))
+    text_file.append(f"{text_file.index(text_raw)}-{text_raw}")
+    if text_raw == "edit()":
+        print("select the line you want to edit")
