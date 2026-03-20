@@ -1,10 +1,11 @@
 import string
 answer=""
 choose=""
-choose=""
 print("insert yes if you want to use this tool")
 answer=input().lower()
-
+if answer != "yes" or answer != "no":
+    print("error, insert again the answer")
+    answer = input().lower()
 if answer=="no":
     quit
 if answer=="yes":
@@ -29,6 +30,9 @@ if answer=="yes":
             print(new_text)
         print("Do you want to use again this tool? insert yes or no")
         answer=input().lower()
+        if answer != "yes" or answer != "no":
+            print("error, insert again the answer")
+            answer = input().lower()
         if answer=="no":
             break
 
