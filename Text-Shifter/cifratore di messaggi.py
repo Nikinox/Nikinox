@@ -1,4 +1,5 @@
 import string
+print("Welcome to text shifter, a tool to shift the letters of a string with the 'key' a->b and the reverse key b->a")
 answer=""
 choose=""
 print("insert yes if you want to use this tool")
