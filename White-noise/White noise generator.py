@@ -1,46 +1,29 @@
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.io.wavfile import write
-from scipy.signal import welch
-import sounddevice as sd   # <--- libreria per riproduzione audio
+import wave
+import struct
+import random
 
-# parameters
-duration = 120  # seconds
-sampling_rate = 43100  # samples per second (Hz)
+print("welcome to this white noise generator! :)")
+sample_rate = 44100  #  (44.1 kHz, audio standard)
+print("insert a duration in seconds")
+duration = int(input())        # white noise's duration in seconds
+while duration <= 0:
+    print("error, please insert again the duration in seconds")
+    duration = int(input())
+num_samples = sample_rate * duration
 
-# total number of samples
-total_samples = duration * sampling_rate
+print("insert the name of the .wav file you want to create")
+file_name = str(input())  # file name input
 
-# generate white noise
-white_noise = np.random.normal(0, 1, total_samples)
+with wave.open(file_name, "w") as f:  #  opens a new .wav file
+    f.setnchannels(1)                 # sets one audio channel (mono)
+    f.setsampwidth(2)
+    f.setframerate(sample_rate)       # sets the sample rate (campioni al secondo)
 
-# plot the white noise (first 1000 samples)
-plt.figure(figsize=(10, 4))
-plt.plot(white_noise[:1000])
-plt.title("white noise signal")
-plt.xlabel("sample number")
-plt.ylabel("amplitude")
-plt.show()
+    for _ in range(num_samples):      # cycle for the frequencies
+        value = random.randint(-32768, 32767)
+        data = struct.pack('<h', value)
+        f.writeframesraw(data)                 # writes the bytes in the audio file
 
-# save the white noise as a wav file
+    f.writeframes(b"")              # closes the audio data nblock
 
-write('white_noise.wav', sampling_rate, white_noise.astype(np.float32))
-
-# --- PLAY AUDIO ---
-print("Riproduzione in corso... attenzione al volume!")
-sd.play(white_noise, samplerate=sampling_rate)
-sd.wait()   # blocca finché la riproduzione non è finita
-
-# compute the power spectral density
-frequencies, power_spectral_density = welch(white_noise, fs=sampling_rate, nperseg=1024)
-
-# plot the power spectral density
-plt.figure(figsize=(10, 4))
-plt.semilogy(frequencies, power_spectral_density)
-plt.title("power spectral density of white noise")
-plt.xlabel("frequency (Hz)")
-plt.ylabel("power spectral density (V^2/Hz)")
-plt.show()
-
-
-#qualche correzione e aiuto da Copilot
+print(f"File '{file_name}' generato con successo.")  # Messaggio di conferma a fine esecuzione
