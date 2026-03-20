@@ -3,15 +3,16 @@ answer=""
 choose=""
 print("insert yes if you want to use this tool")
 answer=input().lower()
-if answer != "yes" or answer != "no":
+while answer != "yes" and answer != "no":
     print("error, insert again the answer")
     answer = input().lower()
-if answer=="no":
-    quit
-if answer=="yes":
+    if answer=="no":
+        quit
     while answer=="yes":
         print("Insert enc for encrypting a message, insert dec for decrypting a message encrypted")
         choose=input().lower()
+        while choose != "enc" and choose != "dec":
+            print("error, insert again the option")
         if choose=="enc":
             print('inserire testo:')
             text = str(input())
@@ -30,9 +31,8 @@ if answer=="yes":
             print(new_text)
         print("Do you want to use again this tool? insert yes or no")
         answer=input().lower()
-        if answer != "yes" or answer != "no":
+        while answer != "yes" and answer != "no":
             print("error, insert again the answer")
             answer = input().lower()
         if answer=="no":
             break
-
