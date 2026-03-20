@@ -2,28 +2,40 @@ import wave
 import struct
 import random
 
-print("welcome to this white noise generator! :)")
-sample_rate = 44100  #  (44.1 kHz, audio standard)
-print("insert a duration in seconds")
-duration = int(input())        # white noise's duration in seconds
+print("Welcome to this white noise generator! :)")
+
+sample_rate = 44100  # 44.1 kHz, audio standard
+
+# --- Input duration ---
+print("Insert a duration in seconds:")
+duration = int(input())
+
+# duration's input error checking
 while duration <= 0:
-    print("error, please insert again the duration in seconds")
+    print("Error: duration must be greater than 0. Insert again:")
     duration = int(input())
-num_samples = sample_rate * duration
 
-print("insert the name of the .wav file you want to create")
-file_name = str(input())  # file name input
+num_samples = sample_rate * duration  # Numero totale di campioni
 
-with wave.open(file_name, "w") as f:  #  opens a new .wav file
-    f.setnchannels(1)                 # sets one audio channel (mono)
-    f.setsampwidth(2)
-    f.setframerate(sample_rate)       # sets the sample rate (campioni al secondo)
+# --- Input file name
+print("Insert the name of the .wav file you want to create:")
+file_name = str(input())
 
-    for _ in range(num_samples):      # cycle for the frequencies
+# if the user doesn't put the .wav in the input, we add it
+if not file_name.endswith(".wav"):
+    file_name += ".wav"
+
+# audio creation
+with wave.open(file_name, "w") as f:
+    f.setnchannels(1)          # Mono
+    f.setsampwidth(2)          # 16 bit
+    f.setframerate(sample_rate)
+
+    for _ in range(num_samples):
         value = random.randint(-32768, 32767)
         data = struct.pack('<h', value)
-        f.writeframesraw(data)                 # writes the bytes in the audio file
+        f.writeframesraw(data)
 
-    f.writeframes(b"")              # closes the audio data nblock
+    f.writeframes(b"")  # closes correctly the data block
 
-print(f"File '{file_name}' generato con successo.")  # Messaggio di conferma a fine esecuzione
+print(f"File '{file_name}' generated successfully!")
