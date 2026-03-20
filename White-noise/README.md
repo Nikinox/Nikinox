@@ -4,7 +4,7 @@ This is a white noise generator.
 
 Technologies
 
-Python:numpy, matplotlib.pyplot, scipy.io.wavfile, scipy.signal, sounddevice
+Python:wave, struct and random
 
 Features
 
