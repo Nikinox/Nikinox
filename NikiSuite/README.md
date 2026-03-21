@@ -2,6 +2,7 @@ Intro
 
 This is a terminal‑based suite that runs small tools, each accessible through a specific command.
 Its goal is to provide lightweight, portable utilities that automate small repetitive tasks which can be time‑consuming or tedious.
+
 Technologies and Libraries Used
 
     Python
