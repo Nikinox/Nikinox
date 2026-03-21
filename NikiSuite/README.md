@@ -19,6 +19,7 @@ Technologies and Libraries Used
     Walrus operator (:=) for more compact input checks
 
 The suite is built entirely with standard libraries, with no external dependencies.
+
 Features
 
 You can call each tool using its dedicated command and use it as many times as you want.
