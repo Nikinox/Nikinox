@@ -11,48 +11,41 @@ while True:
     print("Text shifter: a tool that shifts the letters of a string with the 'key' a->b and the reverse key b->a")
     print("Letter shifter: a tool that replace a specific letter every time in a string")
     print("White noise generator: a tool that can write white noise files and save them with .wav format")
-    print("insert one of these commands to run one of the tools above: txtshifter for the text shifter, lettershifter for the letter shifter and wnoise for the white noise generator")
 
     #error checking
-    while (command := input().lower()) not in ["txtshifter", "lettershifter", "wnoise"]:
+    while (command := input("insert txtshifter to use the text shifter, lettershifter for the letter shifter and wnoise for the white noise generator: ").lower()) not in ["txtshifter", "lettershifter", "wnoise", "pwgenerator"]:
         print("error, insert again the input")
     
 #text shifter block
     if command == "txtshifter":
         print("Welcome to text shifter, a tool to shift the letters of a string with the 'key' a->b and the reverse key b->a")
-        print("insert yes if you want to use this tool")
     #error checking
-        while (answer := input().lower()) not in ["yes", "no"]:
+        while (answer := input("insert yes if you want to use this tool").lower()) not in ["yes", "no"]:
             print("error, insert again the answer")
 
         if answer == "no":
             quit
     #running block
         while answer == "yes":
-            print("Insert enc for encrypting a message, insert dec for decrypting a message encrypted")
         #error checking of the choice between encryption and decription
-            while (choose := input().lower()) not in ["enc", "dec"]:
+            while (choose := input("Insert enc for encrypting a message, insert dec for decrypting an encrypted message").lower()) not in ["enc", "dec"]:
                 print("error, insert again the option")
         #encryption block
             if choose == "enc":
-                print('insert text:')
-                text = input()
+                text = input('insert text:')
                 alphabet = string.ascii_lowercase
                 shifted = alphabet[1:] + alphabet[0]
                 key = str.maketrans(alphabet, shifted)
                 print(text.translate(key))
         #decritption block
             if choose == "dec":
-                print('insert text:')
-                text = input()
+                text = input('insert text:')
                 alphabet = string.ascii_lowercase
                 shifted = alphabet[-1] + alphabet[:-1]
                 key = str.maketrans(alphabet, shifted)
                 print(text.translate(key))
         #exit/continue mechanic
-            print("Do you want to use again this tool? insert yes or no")
-
-            while (answer := input().lower()) not in ["yes", "no"]:
+            while (answer := input("Do you want to use again this tool? insert yes or no").lower()) not in ["yes", "no"]:
                 print("error, insert answer again")
 
             if answer == "no":
@@ -61,17 +54,13 @@ while True:
     if command == "lettershifter":
         answer = "yes"
         while answer == "yes":
-            print('insert the letter to replace')
-            letter2replace = input().upper()
-            print('insert the letter to place in the place of the letter you want to replace')
-            letter2place=input().upper()
-            print('Insert the text you wanna remix')
-            tongue_twist = input().upper()
-            tongue_twist=tongue_twist.replace(letter2replace, letter2place)#replaces the letter you specified every time in a sentence or a word
-            print(tongue_twist)
-            print("Do you want to continue using this tool?")
+            letter2replace = input('insert the letter to replace').upper()
+            letter2place=input('insert the letter to place in the place of the letter you want to replace').upper()
+            tongue_twist = input('Insert the text you want to remix').upper()
+            tongue_twist=tongue_twist.replace(letter2replace, letter2place)# replaces the letters
+            print(tongue_twist)# prints the final string
             #error checking
-            while (answer := input().lower()) not in ["yes", "no"]:
+            while (answer := input("Do you want to continue using this tool?").lower()) not in ["yes", "no"]:
                 print("error, insert the answer again between yes and no")
             if answer == "no":
                 break
@@ -81,9 +70,8 @@ while True:
         sample_rate = 44100  # 44.1 kHz, audio standard
 
         # --- Input duration ---
-        print("Insert a duration in seconds:")
         # duration's input error checking
-        while (duration := int(input())) <= 0:
+        while (duration := int(input("Insert a duration in seconds:"))) <= 0:
             print("Error: duration must be greater than 0. Insert again:")
 
         num_samples = sample_rate * duration  # Numero totale di campioni
@@ -110,3 +98,16 @@ while True:
             f.writeframes(b"")  # closes correctly the data block
 
         print(f"File '{file_name}' generated successfully!")
+    if command == "pwgenerator":
+        print("Welcome to this password generator")
+        while (lenght := int(input("enter the lenght of the password: "))) <=0:
+            print("error, insert again the lenght")
+        lower=string.ascii_lowercase
+        upper=string.ascii_lowercase
+        num=string.digits
+        symbols=string.punctuation
+        all=lower+upper+num+symbols
+        temp=random.sample(all, lenght)
+        pw = "".join(temp)
+        print("Password: ")
+        print(pw)
