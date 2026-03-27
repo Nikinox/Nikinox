@@ -102,11 +102,7 @@ while True:
         print("Welcome to this password generator")
         while (lenght := int(input("enter the lenght of the password: "))) <=0:
             print("error, insert again the lenght")
-        lower=string.ascii_lowercase
-        upper=string.ascii_lowercase
-        num=string.digits
-        symbols=string.punctuation
-        all=lower+upper+num+symbols
+        all = string.ascii_letters + string.digits + string.punctuation
         temp=random.sample(all, lenght)
         pw = "".join(temp)
         print("Password: ")
