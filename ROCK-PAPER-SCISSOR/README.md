@@ -1,6 +1,6 @@
 Intro
 
-This is the classic game where you choose one between rock, paper and scissorr and you see if you won, lose or tie againist CPU.
+This is the classic game where you choose one between rock, paper and scissorr and you see if you won, lost or draw againist CPU.
 
 Technologies
 
