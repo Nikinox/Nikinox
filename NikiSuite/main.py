@@ -13,14 +13,14 @@ while True:
     print("White noise generator: a tool that can write white noise files and save them with .wav format")
 
     #error checking
-    while (command := input("insert txtshifter to use the text shifter, lettershifter for the letter shifter and wnoise for the white noise generator: ").lower()) not in ["txtshifter", "lettershifter", "wnoise", "pwgenerator"]:
+    while (command := input("insert txtshifter to use the text shifter, lettershifter for the letter shifter, wnoise for the white noise generator and pwgenerator for the password generator: ").lower()) not in ["txtshifter", "lettershifter", "wnoise", "pwgenerator"]:
         print("error, insert again the input")
     
 #text shifter block
     if command == "txtshifter":
         print("Welcome to text shifter, a tool to shift the letters of a string with the 'key' a->b and the reverse key b->a")
     #error checking
-        while (answer := input("insert yes if you want to use this tool").lower()) not in ["yes", "no"]:
+        while (answer := input("insert yes if you want to use this tool: ").lower()) not in ["yes", "no"]:
             print("error, insert again the answer")
 
         if answer == "no":
@@ -45,8 +45,8 @@ while True:
                 key = str.maketrans(alphabet, shifted)
                 print(text.translate(key))
         #exit/continue mechanic
-            while (answer := input("Do you want to use again this tool? insert yes or no").lower()) not in ["yes", "no"]:
-                print("error, insert answer again")
+            while (answer := input("Do you want to use again this tool? insert yes or no: ").lower()) not in ["yes", "no"]:
+                print("error, insert answer again: ")
 
             if answer == "no":
                 break
