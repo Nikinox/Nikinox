@@ -11,6 +11,7 @@ while True:
     print("Text shifter: a tool that shifts the letters of a string with the 'key' a->b and the reverse key b->a")
     print("Letter shifter: a tool that replace a specific letter every time in a string")
     print("White noise generator: a tool that can write white noise files and save them with .wav format")
+    print("Password generator: a tool that generates a password the lenght you want")
 
     #error checking
     while (command := input("insert txtshifter to use the text shifter, lettershifter for the letter shifter, wnoise for the white noise generator and pwgenerator for the password generator: ").lower()) not in ["txtshifter", "lettershifter", "wnoise", "pwgenerator"]:
