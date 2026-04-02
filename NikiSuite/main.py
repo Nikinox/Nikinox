@@ -1,95 +1,136 @@
+import tkinter as tk
 import random
 import string
 import wave
 import struct
-
-#welcome message
-print("Welcome to NikiSuite, a suite of useful tools that can be fun and also useful to use")
-
-while True:
-    #info messages
-    print("Text shifter: a tool that shifts the letters of a string with the 'key' a->b and the reverse key b->a")
-    print("Letter shifter: a tool that replace a specific letter every time in a string")
-    print("White noise generator: a tool that can write white noise files and save them with .wav format")
-    print("Password generator: a tool that generates a password the lenght you want")
-
-    #error checking
-    while (command := input("insert txtshifter to use the text shifter, lettershifter for the letter shifter, wnoise for the white noise generator and pwgenerator for the password generator: ").lower()) not in ["txtshifter", "lettershifter", "wnoise", "pwgenerator"]:
-        print("error, insert again the input")
-    
+#informations about the tools
+def welcome():
+    return (
+        "Text shifter: a tool that shifts the letters of a string with the 'key' a->b and the reverse key b->a\n"
+        "Letter shifter: a tool that replace a specific letter every time in a string\n"
+        "White noise generator: a tool that can write white noise files and save them with .wav format\n"
+        "Password generator: a tool that generates a password the lenght you want"
+    )
 #text shifter block
-    if command == "txtshifter":
-        print("Welcome to text shifter, a tool to shift the letters of a string with the 'key' a->b and the reverse key b->a")
+def txtshifter():
+    txt_window=tk.Toplevel(root)
+    txt_window.geometry("500x500")
+    txt_window.title("Text shifter")
+    welcome=tk.Label(txt_window, text="Welcome to the text shifter, a tool to shift the letters of a string with the 'key' a->b and the reverse key b->a")
+    welcome.pack()
     #error checking
-        while (answer := input("insert yes if you want to use this tool: ").lower()) not in ["yes", "no"]:
-            print("error, insert again the answer")
+    text=""
+    def enc():
+        nonlocal text
+        text=text_enter.get().lower()
+        key = str.maketrans(string.ascii_lowercase, string.ascii_lowercase[1:] + string.ascii_lowercase[0])
+        text=text.translate(key)
+        output_label.config(text=text)
+    def dec():
+        nonlocal text
+        text=text_enter.get().lower()
+        key = str.maketrans(string.ascii_lowercase, string.ascii_lowercase[-1] + string.ascii_lowercase[:-1])
+        text=text.translate(key)
+        output_label.config(text=text)
+    def copy_shifted_text():
+        txt_window.clipboard_clear()
+        txt_window.clipboard_append(text)
+    text_enter=tk.Entry(txt_window)
+    text_enter.pack(pady=10)
+    output_label=tk.Label(txt_window, text=text, font=("Arial", 12))
+    output_label.pack(pady=10)
+    enc_button=tk.Button(txt_window, text="Encrypt", command=enc, bg="yellow", fg="black")
+    enc_button.pack(pady=10)
+    dec_button=tk.Button(txt_window, text="Decrypt", command=dec, bg="yellow", fg="black")
+    dec_button.pack(pady=10)
+    Copy_text=tk.Button(txt_window, text="Copy", command=copy_shifted_text, bg="red", fg="white")
+    Copy_text.pack(pady=10)
+    txt_window.mainloop()
+def lettershifter():
+    t_twist = ""   # variabile condivisa
 
-        if answer == "no":
-            quit
-    #running block
-        while answer == "yes":
-        #error checking of the choice between encryption and decription
-            while (choose := input("Insert enc for encrypting a message, insert dec for decrypting an encrypted message").lower()) not in ["enc", "dec"]:
-                print("error, insert again the option")
-        #encryption block
-            if choose == "enc":
-                text = input('insert text:')
-                alphabet = string.ascii_lowercase
-                shifted = alphabet[1:] + alphabet[0]
-                key = str.maketrans(alphabet, shifted)
-                print(text.translate(key))
-        #decritption block
-            if choose == "dec":
-                text = input('insert text:')
-                alphabet = string.ascii_lowercase
-                shifted = alphabet[-1] + alphabet[:-1]
-                key = str.maketrans(alphabet, shifted)
-                print(text.translate(key))
-        #exit/continue mechanic
-            while (answer := input("Do you want to use again this tool? insert yes or no: ").lower()) not in ["yes", "no"]:
-                print("error, insert answer again: ")
+    def replace_letter():
+        nonlocal t_twist
 
-            if answer == "no":
-                break
-#letter replacer block
-    if command == "lettershifter":
-        answer = "yes"
-        while answer == "yes":
-            letter2replace = input('insert the letter to replace').upper()
-            letter2place=input('insert the letter to place in the place of the letter you want to replace').upper()
-            tongue_twist = input('Insert the text you want to remix').upper()
-            tongue_twist=tongue_twist.replace(letter2replace, letter2place)# replaces the letters
-            print(tongue_twist)# prints the final string
-            #error checking
-            while (answer := input("Do you want to continue using this tool?").lower()) not in ["yes", "no"]:
-                print("error, insert the answer again between yes and no")
-            if answer == "no":
-                break
-   #white noise block 
-    if command == "wnoise":
-        print("Welcome to this white noise generator! :)")
-        sample_rate = 44100  # 44.1 kHz, audio standard
+        # 1) reads the inputs
+        letter2replace = l_replace_enter.get().lower()
+        letter2place = l_place_enter.get().lower()
+        tongue_twist = tongue_twist_enter.get().lower()
 
-        # --- Input duration ---
-        # duration's input error checking
-        while (duration := int(input("Insert a duration in seconds:"))) <= 0:
-            print("Error: duration must be greater than 0. Insert again:")
+        # 2) replaces the letters
+        t_twist = tongue_twist.replace(letter2replace, letter2place)
+
+        # 3) updates the label
+        output_label.config(text=t_twist)
+
+    def Copy_the_tongue_twist():
+        l_window.clipboard_clear()
+        l_window.clipboard_append(t_twist)
+
+    l_window = tk.Toplevel()
+    l_window.geometry("500x500")
+    l_window.title("Letter replacer")
+
+    tk.Label(l_window, text='insert the letter to replace').pack(pady=10)
+    l_replace_enter = tk.Entry(l_window)
+    l_replace_enter.pack(pady=10)
+
+    tk.Label(l_window, text='insert the letter to place').pack(pady=10)
+    l_place_enter = tk.Entry(l_window)
+    l_place_enter.pack(pady=10)
+
+    tk.Label(l_window, text='Insert the text you want to remix').pack(pady=10)
+    tongue_twist_enter = tk.Entry(l_window)
+    tongue_twist_enter.pack(pady=10)
+
+    # label
+    output_label = tk.Label(l_window, text="")
+    output_label.pack(pady=10)
+
+    genera = tk.Button(l_window, text="Replace", command=replace_letter, bg="red", fg="white")
+    genera.pack(pady=10)
+
+    copy = tk.Button(l_window, text="Copy to\nthe clipboard", command=Copy_the_tongue_twist, bg="purple", fg="red")
+    copy.pack(pady=10)
+def wnoise():
+    wn_window=tk.Toplevel(root)
+    wn_window.geometry("500x500")
+    wn_window.title("White noise generator")
+    tk.Label(wn_window, text="Welcome to this white noise generator! :)")
+    tk.Label(wn_window, text="Enter the duration in seconds: ").pack(pady=10)
+    sample_rate = 44100  # 44.1 kHz, audio standard
+    wn_entry=tk.Entry(wn_window)
+    wn_entry.pack()
+    tk.Label(wn_window, text="Insert the name of the .wav file you want to create: ").pack(pady=20)
+    wn_entry1=tk.Entry(wn_window)
+    wn_entry1.pack()
+    output_label=tk.Label(wn_window, text="", font=("Arial", 12))
+    output_label.pack(pady=20)
+    def noise_generation():
+        duration=int(wn_entry.get())
+        try:
+            if duration <= 0:
+                output_label.config(text="Error: duration must be greater than 0. Insert again:")
+                duration = int(wn_entry.get())
+        except ValueError:
+            output_label.config(text="Error: insert a valid number")
+            tk.Label(output_label)
+            return
 
         num_samples = sample_rate * duration  # Numero totale di campioni
 
-        # --- Input file name
-        print("Insert the name of the .wav file you want to create:")
-        file_name = str(input())
+            # --- Input file name
+        file_name = wn_entry1.get()
 
         # if the user doesn't put the .wav in the input, we add it
         if not file_name.endswith(".wav"):
             file_name += ".wav"
 
-        # audio creation
+            # audio creation
         with wave.open(file_name, "wb") as f:
             f.setnchannels(1)          # Mono
             f.setsampwidth(2)          # 16 bit
-            f.setframerate(sample_rate)
+            f.setframerate(sample_rate) 
 
             for _ in range(num_samples):
                 value = random.randint(-32768, 32767)
@@ -97,14 +138,52 @@ while True:
                 f.writeframesraw(data)
 
             f.writeframes(b"")  # closes correctly the data block
+        output_label.config(text=f"File '{file_name}' generated successfully!")
+        tk.Label(output_label)
+    tk.Button(wn_window, text="Generate", command=noise_generation, bg="red", fg="white").pack(pady=10)
+    wn_window.mainloop()
+def pwgenerator():
+    pwg_window=tk.Toplevel(root)
+    pwg_window.geometry("500x500")
+    pwg_window.title("Password generator")
 
-        print(f"File '{file_name}' generated successfully!")
-    if command == "pwgenerator":
-        print("Welcome to this password generator")
-        while (lenght := int(input("enter the lenght of the password: "))) <=0:
-            print("error, insert again the lenght")
-        all = string.ascii_letters + string.digits + string.punctuation
-        temp=random.sample(all, lenght)
-        pw = "".join(temp)
-        print("Password: ")
-        print(pw)
+    tk.Label(pwg_window, text="Enter the lenght of the password: ").pack(pady=10)
+    pwg_entry=tk.Entry(pwg_window)
+    pwg_entry.pack()
+    output_label=tk.Label(pwg_window, text="", font=("Arial", 12))
+    output_label.pack(pady=20)
+
+    def pwg():
+        try:
+            lenght = int(pwg_entry.get())
+            if lenght<=0:
+                output_label.config(text="Error: lenght must be > 0")
+                return
+        except ValueError:
+            output_label.config(text="Error: insert a valid number")
+            return
+        all_chars = string.ascii_letters + string.digits + string.punctuation
+        pw="".join(random.sample(all_chars, lenght))
+        pwg_window.clipboard_clear()
+        pwg_window.clipboard_append(pw)
+        output_label.config(text=f"Password: \n{pw}\nthe password was copied to clipboard successfully")
+        def copy():
+            pwg_window.clipboard_clear()
+            pwg_window.clipboard_append(pw)
+        copy=tk.Button(text="Copy", command=copy, bg="red", fg="white")
+        copy.pack()
+        tk.Label(output_label)
+    tk.Button(pwg_window, text="Generate", command=pwg, bg="red", fg="white").pack(pady=10)
+root=tk.Tk()
+root.geometry("500x500")
+root.title("NikiSuite")
+tk.Label(root, text=welcome()).pack()
+pwg_button = tk.Button(text="Password \n generator", command=pwgenerator, bg="orange", fg="blue")
+pwg_button.pack()
+wn_button = tk.Button(text="White noise \n generator", command=wnoise, bg="orange", fg="blue")
+wn_button.pack()
+txt_button=tk.Button(text="Text shifter", command=txtshifter, bg="orange", fg="blue")
+txt_button.pack()
+l_button=tk.Button(text="Letter replacer", command=lettershifter, bg="orange", fg="blue")
+l_button.pack()
+root.mainloop()
