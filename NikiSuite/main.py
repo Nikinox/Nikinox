@@ -3,6 +3,7 @@ import random
 import string
 import wave
 import struct
+import math
 
 # informations about the tools
 def welcome():
@@ -151,6 +152,7 @@ def pwgenerator():
         copy_btn = tk.Button(pwg_window, text="Copy", command=copy, bg="red", fg="white")
         copy_btn.pack()
     tk.Button(pwg_window, text="Generate", command=pwg, bg="red", fg="white").pack(pady=10)
+
 def calculator():
     """Apre una finestra calcolatrice. Richiamabile da qualsiasi bottone."""
  
@@ -168,7 +170,7 @@ def calculator():
     display = tk.Entry(
         win, textvariable=display_var,
         font=("Consolas", 28), bd=0, relief="flat",
-        bg="#17182B", fg="#a0b5fa", justify="right",
+        bg="#313244", fg="#cdd6f4", justify="right",
         insertbackground="#cdd6f4", state="readonly",
         readonlybackground="#313244"
     )
@@ -244,45 +246,59 @@ def calculator():
         except Exception:
             pass
  
+    def press_sqrt():
+        nonlocal expression, new_input
+        try:
+            val = math.sqrt(float(display_var.get()))
+            display_var.set(int(val) if val == int(val) else round(val, 10))
+            expression = str(val)
+            new_input = True
+        except ValueError:
+            display_var.set("Error")
+            expression = ""
+            new_input = True
+ 
     # --- Layout bottoni ---
     BUTTONS = [
         ("C",   1, 0, press_clear),
         ("+/-", 1, 1, press_sign),
         ("%",   1, 2, press_percent),
-        ("÷",   1, 3, lambda: press_op("/")),
+        ("√",   1, 3, press_sqrt),
  
         ("7",   2, 0, lambda: press_digit("7")),
         ("8",   2, 1, lambda: press_digit("8")),
         ("9",   2, 2, lambda: press_digit("9")),
-        ("×",   2, 3, lambda: press_op("*")),
+        ("÷",   2, 3, lambda: press_op("/")),
  
         ("4",   3, 0, lambda: press_digit("4")),
         ("5",   3, 1, lambda: press_digit("5")),
         ("6",   3, 2, lambda: press_digit("6")),
-        ("−",   3, 3, lambda: press_op("-")),
+        ("×",   3, 3, lambda: press_op("*")),
  
         ("1",   4, 0, lambda: press_digit("1")),
         ("2",   4, 1, lambda: press_digit("2")),
         ("3",   4, 2, lambda: press_digit("3")),
-        ("+",   4, 3, lambda: press_op("+")),
+        ("−",   4, 3, lambda: press_op("-")),
  
         (".",   5, 0, press_dot),
         ("0",   5, 1, lambda: press_digit("0")),
-        ("⌫",   5, 2, lambda: (
-            display_var.set(display_var.get()[:-1] or "0")
-        )),
-        ("=",   5, 3, press_equal),
+        ("⌫",   5, 2, lambda: display_var.set(display_var.get()[:-1] or "0")),
+        ("+",   5, 3, lambda: press_op("+")),
+ 
+        ("=",   6, 3, press_equal),
     ]
  
     # Colori per categoria
     def btn_color(label):
         if label in ("C", "+/-", "%"):
-            return "#585b70", "#cdd6f4"   # bg, fg
-        if label in ("÷", "×", "−", "+", "="):
+            return "#585b70", "#cdd6f4"
+        if label in ("÷", "×", "−", "+", "=", "√"):
             return "#fab387", "#1e1e2e"
         return "#45475a", "#cdd6f4"
  
     for (label, row, col, cmd) in BUTTONS:
+        if cmd is None:
+            continue
         bg, fg = btn_color(label)
         tk.Button(
             win, text=label, command=cmd,
@@ -294,6 +310,8 @@ def calculator():
     # Griglia responsiva
     for i in range(4):
         win.grid_columnconfigure(i, weight=1)
+ 
+
 # ── main window ──────────────────────────────
 
 root = tk.Tk()
