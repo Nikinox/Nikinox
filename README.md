@@ -1,10 +1,23 @@
-I'm Nikinox.
+👋 Hi, I'm Nikinox
 
-I'm a teenager who loves programming and building things from the logic to the actual code.
+I'm a teenager passionate about programming and building things — from the core logic to the final code.  
+I love turning ideas into working projects and learning something new every time I build.
 
-🖥️ Tools  
-I mainly work with Python.
-I use Visual Studio Code as my main code editor.
+🖥️ Tools & Stack
+- Mainly working with Python  
+- Using Visual Studio Code as my primary editor  
+- Constantly exploring new technologies to improve my workflow
 
-🚀 Mindset  
-My goal is simple: keep building, keep learning, and keep improving.
+📚 Currently Learning
+- Pygame — building games and interactive experiences  
+- Advanced Python concepts
+
+🔧 Dev Stats
+- Total projects built: 15
+- Years of coding: 6 months(if we counted scratch would be 3 years)
+- Favorite stack: Python
+
+🚀 Mindset
+My philosophy is simple:  
+Keep building. Keep learning. Keep improving.  
+Every project is a chance to level up.
