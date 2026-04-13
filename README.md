@@ -18,6 +18,7 @@ I love turning ideas into working projects and learning something new every time
 - Favorite stack: Python
 
 🚀 Mindset
+
 My philosophy is simple:  
 Keep building. Keep learning. Keep improving.  
 Every project is a chance to level up.
