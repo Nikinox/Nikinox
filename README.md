@@ -10,7 +10,7 @@ I love turning ideas into working projects and learning something new every time
 
 📚 Currently Learning
 - Pygame — building games and interactive experiences  
-- Advanced Python concepts
+- trying to master Tkinter
 
 🔧 Dev Stats
 - Total projects built: 16
