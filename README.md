@@ -13,7 +13,7 @@ I love turning ideas into working projects and learning something new every time
 - trying to master Tkinter
 
 🔧 Dev Stats
-- Total projects built: 16
+- Total projects built: 17
 - Years of coding: 6 months(if we counted scratch would be 3 years)
 - Favorite stack: Python
 
