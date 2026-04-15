@@ -1,4 +1,5 @@
 📦 NikiSuite — Portable, Minimal, Useful
+
 📝 Overview
 
 The NikiSuite is an open‑source, fully portable collection of tools that run without installing any external Python packages.
@@ -7,51 +8,62 @@ Its main difference from other tool collections is simple:
 👉 No dependencies. No installers. No bloat. Only useful tools.
 
 Everything runs on standard Python + Tkinter, making the suite lightweight, fast, and easy to carry on any machine.
+
 🧰 Components of the NikiSuite
 
 As of now, the NikiSuite includes six tools:
-🔤 Text Shifter
 
-Replaces every letter in a string with either the next or previous letter in the alphabet.
-🔁 Letter Replacer
+    🔤 Text Shifter
+    
+    Replaces every letter in a string with either the next or previous letter in the alphabet.
+    
+    🔁 Letter Replacer
+    
+    Replaces any letter with another one you choose.
+    Example: replacing all e with q in
+    This project is awesome  
+    produces
+    This projqct is awqsomq.
+    
+    🔐 Password Generator
+    
+    Generates a random password based on the length you choose.
+    
+    🎧 White Noise Generator
+    
+    Creates a .wav white noise file.
+    You choose the duration and the filename.
+    
+    ➗ Basic Calculator
+    
+    A simple calculator for quick operations.
+    
+    📝 Text Editor
+    
+    A lightweight editor that lets you:
+    
+        create files
+    
+        open files
+    
+        edit text or code
+    
+        save and save as
+    
+    (You cannot run code inside it — it’s intentionally minimal.)
 
-Replaces any letter with another one you choose.
-Example: replacing all e with q in
-This project is awesome  
-produces
-This projqct is awqsomq.
-🔐 Password Generator
-
-Generates a random password based on the length you choose.
-🎧 White Noise Generator
-
-Creates a .wav white noise file.
-You choose the duration and the filename.
-➗ Basic Calculator
-
-A simple calculator for quick operations.
-📝 Text Editor
-
-A lightweight editor that lets you:
-
-    create files
-
-    open files
-
-    edit text or code
-
-    save and save as
-
-(You cannot run code inside it — it’s intentionally minimal.)
 🏗️ Architecture
+
 🪟 Window Structure
 
 All sub‑windows depend on the main window.
 Closing the main window closes the entire suite — clean and predictable.
+
 ⚙️ Function‑Based Design
 
 Each tool is implemented as its own function.
 Buttons only call their associated function, preventing accidental cross‑execution or internal conflicts.
+
 📦 Zero External Dependencies
 
 The suite uses only:
@@ -61,6 +73,7 @@ The suite uses only:
     Tkinter
 
 Nothing else.
+
 ✨ Code Philosophy
 
     short
@@ -118,6 +131,7 @@ Feel free to modify or extend the suite, as long as:
 📜 License
 
 This project is released under the AGPLv3.0 license.
+
 📚 A Bit of History
 
 The NikiSuite started with a simple goal:
