@@ -1,6 +1,6 @@
 Intro
 
-This is a basic chatbot that answers "bau" or "BAU" at anything, except for some words like "cat" or "bad dog".
+This is a basic chatbot that answers "bau" or "BAU" to anything, except for some words like "cat" or "bad dog".
 
 Technologies
 
