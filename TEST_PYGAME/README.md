@@ -31,7 +31,7 @@ You can use this file as a base to copy when starting new Pygame projects.
 Make sure you have Python 3.x and Pygame installed:
 bash
 
-pip install pygame
+    pip install pygame
 
 🧱 Using This as a Game Template
 
