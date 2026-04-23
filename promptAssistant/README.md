@@ -35,7 +35,7 @@ This structure ensures clarity, precision, and consistency across all generated 
 🛠️ How to Use
 
 Run the script from your terminal:
-Codice
+Code
 
     python [name of the file].py
 
