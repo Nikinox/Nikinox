@@ -76,23 +76,23 @@ Nothing else.
 
 ✨ Code Philosophy
 
-    short
+short
 
-    readable
+readable
 
-    minimal
+minimal
 
-    easy to understand and modify
+easy to understand and modify
 
 🚀 Future Possible Upgrades
 
 Some potential future additions:
 
-    🎮 a small collection of games
+🎮 a small collection of games
 
-    🖼️ an image editor
+🖼️ an advanced clipboard
 
-    🔧 improvements to existing tools
+🔧 improvements to existing tools
 
 ❌ Things That Will NEVER Be Added
 
@@ -106,17 +106,17 @@ To preserve the identity of the suite:
 
 Super simple:
 
-    Copy the code
+Copy the code
 
-    Save it into a .py file
+Save it into a .py file
 
-    Run it
+Run it
 
 Requirements:
 
-    Python 3
+Python 3
 
-    Tkinter (included by default on most systems)
+Tkinter (included by default on most systems)
 
 🤝 Contribution Guidelines
 
