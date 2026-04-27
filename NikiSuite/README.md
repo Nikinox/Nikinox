@@ -1,5 +1,9 @@
 📦 NikiSuite — Portable, Minimal, Useful
 
+🔍Preview
+
+to do:put the screenshots
+
 📝 Overview
 
 The NikiSuite is an open‑source, fully portable collection of tools that run without installing any external Python packages.
