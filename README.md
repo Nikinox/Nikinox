@@ -9,7 +9,6 @@ I love turning ideas into working projects and learning something new every time
 - Constantly exploring new technologies to improve my workflow
 
 📚 Currently Learning
-- Pygame — building games and interactive experiences  
 - trying to master Tkinter
 
 🔧 Dev Stats
