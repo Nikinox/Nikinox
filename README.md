@@ -13,7 +13,7 @@ I love turning ideas into working projects and learning something new every time
 
 🔧 Dev Stats
 - Total projects built: 17
-- Years of coding: 6 months(if we counted scratch would be 2.5 years)
+- Years of coding: 4 months(if we counted scratch would be 2.5 years)
 - Favorite stack: Python
 
 🚀 Mindset
