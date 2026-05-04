@@ -12,4 +12,5 @@ More games will be added over time as the suite evolves.
 Preview:
 <img width="668" height="458" alt="immagine" src="https://github.com/user-attachments/assets/8dd7b06b-a990-4a91-a665-bc4771bba11c" />
 
+<img width="361" height="362" alt="immagine" src="https://github.com/user-attachments/assets/28bc493b-0b16-46b8-bccb-f2f13698557c" />
 
