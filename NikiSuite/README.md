@@ -2,7 +2,8 @@
 
 🔍Preview
 
-<img width="1366" height="768" alt="main-gui" src="https://github.com/user-attachments/assets/5090f20d-f8e3-4dd0-8bc5-a1337af1f472" />
+<img width="604" height="430" alt="immagine" src="https://github.com/user-attachments/assets/c02c16f2-7dea-465b-b04e-5c7761040d15" />
+
 <img width="1366" height="768" alt="letter_replacer" src="https://github.com/user-attachments/assets/6f776b01-0f08-4681-ad3b-f284f4dca0fa" />
 <img width="1366" height="768" alt="password_generator" src="https://github.com/user-attachments/assets/447c40f3-b2ec-49ee-b677-0d2f5b89dfde" />
 <img width="1366" height="768" alt="text_editor_home" src="https://github.com/user-attachments/assets/9b503330-b6b0-4be5-9b9d-d5762786f901" />
@@ -10,6 +11,8 @@
 <img width="1366" height="768" alt="white_noise_generator" src="https://github.com/user-attachments/assets/b64c45f5-11b7-42fc-bffb-ae2673c892f6" />
 <img width="1366" height="768" alt="immagine" src="https://github.com/user-attachments/assets/fb5fc475-d28a-4297-9064-5be282e71a8b" />
 
+<img width="668" height="458" alt="immagine" src="https://github.com/user-attachments/assets/45433340-a2f3-4505-a374-5c88dbe939a3" />
+<img width="361" height="362" alt="immagine" src="https://github.com/user-attachments/assets/b531d214-9165-4d65-a476-2415667d8221" />
 
 
 📝 Overview
