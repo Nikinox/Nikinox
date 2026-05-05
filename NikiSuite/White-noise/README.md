@@ -9,7 +9,7 @@ Python:wave, struct and random
 Features
 
 You insert the duration you want the audio to have and in a few seconds he will generaate the audio.
-When he plays the audio, before it a message pops up and says to pay atttention to the sound because it might be too loud and to put a lower volume to the device.
+
 
 The process
 
