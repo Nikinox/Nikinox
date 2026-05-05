@@ -13,7 +13,7 @@ def welcome():
         "Letter shifter: a tool that replace a specific letter every time in a string\n"
         "White noise generator: a tool that can write white noise files and save them with .wav format\n"
         "Password generator: a tool that generates a password the lenght you want\n"
-        "Text editor: a tool that can edit text(it has some issues)"
+        "Text editor: a tool that can edit text(it has some issues)\n"
         "Calculator: a fully functional calculator"
     )
 
