@@ -483,6 +483,19 @@ def gamesuite():
         def fill_the_cell():
             nonlocal turn
             cell=int(choice.get())
+            outputl=tk.Label(tictactoe_wn)
+            try:
+                cell = int(choice.get())
+            except ValueError:
+                outputl.config(text="Error: insert a valid number")
+                outputl.grid()
+                return
+            if cell<1 or cell>9:
+                outputl.config(text="Error: choice must be > 0 and <=9")
+                outputl.grid()
+                return
+            outputl.config(text="")
+            outputl.grid()
             if turn == 0:
                 match cell:
                     case 1:
