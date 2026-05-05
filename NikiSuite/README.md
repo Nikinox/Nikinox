@@ -67,6 +67,12 @@ As of now, the NikiSuite includes six tools:
         save and save as
     
     (You cannot run code inside it — it’s intentionally minimal.)
+    (it's bugged)
+
+    🎮 Gaming collection 
+    A collection that has only 1 game currently:
+        -a command line based tictactoe
+    All the games in this suite are NOT made with pygame, only with Tkinter and Python standard libraries to keep the portability.
 
 🏗️ Architecture
 
@@ -104,11 +110,9 @@ Nothing else.
 
 Some potential future additions:
 
--🎮 a small collection of games
-
 -🖼️ an advanced clipboard
 
--🔧 improvements to existing tools
+-🔧 improvements to existing tools (like fixing the text editor)
 
 
 ❌ Things That Will NEVER Be Added
