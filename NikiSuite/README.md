@@ -2,7 +2,8 @@
 
 🔍Preview
 
-<img width="608" height="427" alt="immagine" src="https://github.com/user-attachments/assets/4a604610-119a-41b9-954e-718d17f3d64a" />
+<img width="597" height="439" alt="immagine" src="https://github.com/user-attachments/assets/bcea07fb-5120-4067-9df3-1887cc45c1c0" />
+
 
 <img width="1366" height="768" alt="letter_replacer" src="https://github.com/user-attachments/assets/6f776b01-0f08-4681-ad3b-f284f4dca0fa" />
 <img width="1366" height="768" alt="password_generator" src="https://github.com/user-attachments/assets/447c40f3-b2ec-49ee-b677-0d2f5b89dfde" />
