@@ -13,8 +13,7 @@ def welcome():
         "Letter shifter: a tool that replace a specific letter every time in a string\n"
         "White noise generator: a tool that can write white noise files and save them with .wav format\n"
         "Password generator: a tool that generates a password the lenght you want\n"
-        "Calculator: a fully functional calculator\n"
-        "GameSuite: a portable collection of mini games\n"
+        "Calculator: a fully functional calculator"
     )
 
 # text shifter block
@@ -313,6 +312,8 @@ def calculator():
     for i in range(4):
         win.grid_columnconfigure(i, weight=1)
  
+
+def text_editor():
     txt_window = tk.Toplevel(root)
     txt_window.title("NikiText")
     txt_window.geometry("650x650")
@@ -348,6 +349,25 @@ def calculator():
             my_text.delete(1.0, tk.END)
             txt_window.title("New File - NikiText")
 
+    def open_file():
+        # Clear the editor before loading a new file
+        my_text.delete(1.0, tk.END)
+
+        # Open file dialog with multiple supported extensions
+        text_file = filedialog.askopenfilename(
+            title="Open File",
+            filetypes=(
+                ("Text Files", "*.txt"), ("HTML Files", "*.html"), ("Python Files", "*.py"),
+                ("Java Files", "*.java"), ("C++ Files", "*.cpp"), ("C Files", "*.c"),
+                ("Batch Files", "*.bat"), ("Bash files", "*.sh"), ("Rust files", "*.rs"),
+                ("C# Files", "*.cs"), ("Kotlin Files", "*.kt"), ("Swift Files", "*.swift"),
+                ("Ruby Files", "*.rb"), ("GO files", "*.go"), ("PHP files", "*.php"),
+                ("JavaScript Files", "*.js"), ("TypeScript Files", "*.ts"), ("CSS Files", "*.css"),
+                ("XML files", "*.xml"), ("YAML Files", "*.yml"), ("JSON Files", "*.json"),
+                ("PowerShell Files", "*.ps1"), ("Perl Files", "*.pl"), ("Lua Files", "*.lua"),
+                ("R Files", "*.r"), ("All Files", "*.*")
+            )
+        )
 
     def save_as_file():
         # Save As dialog with default extension and supported formats
@@ -404,6 +424,7 @@ def calculator():
 
     my_menu.add_cascade(label="File", menu=file_menu)
     file_menu.add_command(label="New", command=new_file)
+    file_menu.add_command(label="Open", command=open_file)
     file_menu.add_command(label="Save", command=save_file)
     file_menu.add_command(label="Save As", command=save_as_file)
     file_menu.add_separator()
@@ -607,6 +628,8 @@ l_button = tk.Button(root, text="Letter replacer", command=lettershifter, bg="or
 l_button.pack()
 calculator_button=tk.Button(root, text="Calculator", command=calculator, bg="orange", fg="blue")
 calculator_button.pack()
+text_editor_button=tk.Button(root, text="Text Editor", command=text_editor, bg="orange", fg="blue")
+text_editor_button.pack()
 game_suite=tk.Button(root, text="GameSuite", bg="orange", fg="blue", command=gamesuite)
 game_suite.pack()
 root.mainloop()
