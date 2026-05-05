@@ -1,1 +1,1 @@
-This tool manipulates strings replacing a specific letter every time it finds it in the string you give it.
+This tool replaces all the letters in a string either with the previous or the next one.
