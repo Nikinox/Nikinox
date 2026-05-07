@@ -489,10 +489,12 @@ def gamesuite():
             except ValueError:
                 outputl.config(text="Error: insert a valid number")
                 outputl.grid()
+                turn=turn
                 return
             if cell<1 or cell>9:
                 outputl.config(text="Error: choice must be > 0 and <=9")
                 outputl.grid()
+                turn=turn
                 return
             outputl.config(text="")
             outputl.grid()
