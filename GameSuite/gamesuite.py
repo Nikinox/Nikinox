@@ -42,7 +42,8 @@ def tictactoe():
             nonlocal turn
             cell=int(choice.get())
             outputl=tk.Label(tictactoe_wn)
-            try:
+            #now it doesn't skip the turn with an error
+                try:
                 cell = int(choice.get())
             except ValueError:
                 outputl.config(text="Error: insert a valid number")
