@@ -82,7 +82,7 @@ All sub‑windows depend on the main window.
 Closing the main window closes the entire suite — clean and predictable.
 
 Here's an image that shows the window dependencies 👇.
-<img width="509" height="215" alt="immagine" src="https://github.com/user-attachments/assets/a7e18a5a-bb64-4538-b497-ffaa1d8c4090" />
+<img width="2026" height="1782" alt="immagine" src="https://github.com/user-attachments/assets/2e208097-4d81-49bf-9962-23c8f79eeb20" />
 
 
 ⚙️ Function‑Based Design
