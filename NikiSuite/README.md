@@ -65,7 +65,7 @@ As of now, the NikiSuite includes six tools:
         edit text or code
     
         save and save as
-    
+    dai non pi
     (You cannot run code inside it — it’s intentionally minimal.)
     (it's bugged)
 
@@ -94,7 +94,7 @@ Buttons only call their associated function, preventing accidental cross‑execu
 
 The suite uses only:
 
-    Python standard library
+    Python standard libraries
 
     Tkinter
 
