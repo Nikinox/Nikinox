@@ -81,6 +81,10 @@ As of now, the NikiSuite includes six tools:
 All sub‑windows depend on the main window.
 Closing the main window closes the entire suite — clean and predictable.
 
+Here's an image that shows the window dependencies 👇.
+<img width="509" height="215" alt="immagine" src="https://github.com/user-attachments/assets/a7e18a5a-bb64-4538-b497-ffaa1d8c4090" />
+
+
 ⚙️ Function‑Based Design
 
 Each tool is implemented as its own function.
@@ -109,8 +113,6 @@ Nothing else.
 🚀 Future Possible Upgrades
 
 Some potential future additions:
-
--🖼️ an advanced clipboard
 
 -🔧 improvements to existing tools (like fixing the text editor)
 
