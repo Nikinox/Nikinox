@@ -16,3 +16,6 @@ int main(){
 
     return 0;
 }
+int read_cpu(){
+    return idle, total;
+}
