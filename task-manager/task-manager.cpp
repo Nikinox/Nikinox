@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
-void read_cpu();
-void read_ram();
-void read_ssd();
+int read_cpu();
+int read_ram();
+int read_ssd();
 void clear_screen();
 int main(){
     ifstream file("/proc/stat");
