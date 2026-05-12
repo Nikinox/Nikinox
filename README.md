@@ -1,23 +1,23 @@
 👋 Hi, I'm Nikinox
 
-I'm a teenager passionate about programming and building things — from the core logic to the final code.  
+I'm a teenager passionate about programming and building stuff — from the core logic to the final code.  
 I love turning ideas into working projects and learning something new every time I build.
 
 🖥️ Tools & Stack
 - Mainly working with Python  
 - Using Visual Studio Code as my primary editor  
-- Constantly exploring new technologies to improve my workflow
 
 📚 Currently Learning
 - trying to master Tkinter
+- how to read tasks to build a task manager in C++
 
 🔧 Dev Stats
 - Total projects built: 19
-- Years of coding: 4 months(if we counted scratch would be 2.5 years)
+- Years of coding: 5 months(if we counted scratch would be 2.6 years)
 - Favorite stack: Python
 
 🚀 Mindset
 
 My philosophy is simple:  
-Keep building. Keep learning. Keep improving.  
+Keep trying. Keep building. Keep learning. Keep improving.  
 Every project is a chance to level up.
