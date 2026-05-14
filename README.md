@@ -7,8 +7,8 @@ I love turning ideas into working projects and learning something new every time
 - Mainly working with Python  
 - Using Visual Studio Code as my primary editor  
 
-📚 Currently Learning
-- trying to master Tkinter
+📚 Currently Working On
+- trying to build a palette maker with Pillow in python (also other functions and libraries)
 - how to read tasks to build a task manager in C++
 
 🔧 Dev Stats
