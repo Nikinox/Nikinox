@@ -22,7 +22,7 @@ I like turning ideas into working projects and trying to learn something new eve
 
     Developing a new Tycoon game (no spoilers yet)
 
-    Expanding my personal ecosystem of tools
+    Trying to build different tools
 
     Improving documentation and project structure
 
