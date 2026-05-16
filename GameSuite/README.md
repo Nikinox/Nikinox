@@ -1,4 +1,4 @@
-# 🏷️ GameSuite
+# 🎮 GameSuite
 
 GameSuite is a collection of lightweight mini‑games.
 Only Tkinter‑based games are included in the NikiSuite integration, ensuring full portability and zero installation requirements.
