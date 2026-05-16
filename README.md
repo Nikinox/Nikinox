@@ -67,12 +67,11 @@ A constantly evolving toolbox that reflects my coding style and workflow.
 🎮 Games
 
 Prototypes, experiments, and full games.
+
 🛠️ Tools & Utilities
 
 Small but useful scripts that automate tasks.
-📚 Docs & Workflow
 
-Notes, standards, and personal development guidelines.
 🔗 Bridge Repositories
 
 Some projects have their own bridge repo, which:
