@@ -36,7 +36,9 @@ I like turning ideas into working projects and trying to learn something new eve
 
     Favorite stack: Python
 
-    Philosophy: Keep trying. Keep building. Keep learning. Keep improving.
+🧠 Philosophy: 
+
+Keep trying. Keep building. Keep learning. Keep improving.
 
 🧩 What This Mega‑Repo Is
 
