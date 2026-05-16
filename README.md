@@ -8,8 +8,7 @@ I love turning ideas into working projects and learning something new every time
 - Using Visual Studio Code as my primary editor  
 
 📚 Currently Working On
-- trying to build a palette maker with Pillow in python (also other functions and libraries)
-- how to read tasks to build a task manager in C++
+-making a Tycoon game (no spoilers)
 
 🔧 Dev Stats
 - Total projects built: 19
