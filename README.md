@@ -8,6 +8,7 @@ I love turning ideas into working projects and learning something new every time
 - Using Visual Studio Code as my primary editor  
 
 📚 Currently Working On
+
 -making a Tycoon game (no spoilers)
 
 🔧 Dev Stats
