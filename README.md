@@ -52,7 +52,7 @@ It contains:
 
     Experiments & concepts
 
-    Documentation & workflows
+    Documentation
 
     Long‑term projects like the NikiSuite
 
