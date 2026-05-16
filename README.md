@@ -106,6 +106,27 @@ A NikiSuite module for generating passwords.
 
     Add more bridge repos for key projects
 
+🧭 How to Navigate This Repo
+
+This mega‑repo is organized to be simple, predictable, and easy to explore.
+Every project lives inside its own directory, and each directory contains only two things:
+
+    README.md — documentation, description, and details about the project
+
+    Single source file — all the code for that project in one place
+
+This structure keeps the repository:
+
+    clean
+
+    easy to browse
+
+    beginner‑friendly
+
+    consistent across all projects
+
+If you open a folder, you immediately know where the code is and what the project does.
+
 ⭐ Support
 
 If you enjoy my work, consider starring the repository —
