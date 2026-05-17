@@ -13,7 +13,7 @@ Mintbuntu has the goal to make Lubuntu faster and better adding some Mint XFCE f
 - Some basic split screen funtionalities
 - all XFCE functionalities
 
-## Installazione
+## Installation
  Method 1 — authomatic installation
 
 Just copy the command below:
