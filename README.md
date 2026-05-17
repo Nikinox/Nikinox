@@ -96,7 +96,7 @@ A NikiSuite module for generating passwords.
 
 🛣️ Roadmap
 
-    Finish Sheep Paper Tycoon
+    Finish the Tycoon
 
     Create a dedicated GitHub Page for the game
 
