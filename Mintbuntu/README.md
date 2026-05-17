@@ -1,4 +1,4 @@
-### Mintbuntu
+## Mintbuntu
 
 ## Introduction
 
