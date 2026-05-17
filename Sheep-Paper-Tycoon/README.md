@@ -22,7 +22,7 @@ The concept originated from a spontaneous idea that emerged during a history cla
 
 🚀 How to Play
 
-Open one of the links between https://scratch.mit.edu/projects/1321202030/ and 
+Open one of the links between https://scratch.mit.edu/projects/1321202030/ or https://nikinox.itch.io/sheep-paper-tycoon
 
 The game will automatically start in your browser
 
