@@ -1,5 +1,9 @@
 # Mintbuntu
 
+# ====================
+   # MINTBUNTU
+# ====================
+
 ## Introduction
 
 Mintbuntu has the goal to make Lubuntu faster and better adding some Mint XFCE funtionalities thanks to the XFCE desktop environment.
