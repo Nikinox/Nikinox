@@ -1,4 +1,4 @@
-## Mintbuntu
+# Mintbuntu
 
 ## Introduction
 
@@ -10,12 +10,12 @@ Mintbuntu has the goal to make Lubuntu faster and better adding some Mint XFCE f
 - all XFCE functionalities
 
 ## Installazione
-# Method 1 — authomatic installation
+ Method 1 — authomatic installation
 
 to do: add the command
 
 
-# Method 2 — manual installation
+ Method 2 — manual installation
 1. Clone the directory
 2. make the script executable
 3. run the script  
