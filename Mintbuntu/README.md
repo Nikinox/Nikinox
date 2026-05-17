@@ -12,8 +12,9 @@ Mintbuntu has the goal to make Lubuntu faster and better adding some Mint XFCE f
 ## Installazione
  Method 1 — authomatic installation
 
-to do: add the command
+Just copy the command below:
 
+curl -s https://raw.githubusercontent.com/Nikinox/Nikinox/main/Mintbuntu/install.sh | bash
 
  Method 2 — manual installation
 1. Clone the directory
@@ -22,14 +23,10 @@ to do: add the command
 
 
 ## How the files work
-- `install.sh` — installs the stuff
+- `install.sh` — installs the stuff and the .tar.gz
 - `xfce-config.tar.gz` — configures the stuff installed with install.sh
-
-## Screenshot
-
-to do: add the screenshots
 
 ## Credits
 
-I just wanted to speed up my Lubuntu and make it with less lag and faster.
+I just wanted to speed up my Lubuntu and make it with less lag and a little better.
 
