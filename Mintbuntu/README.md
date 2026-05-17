@@ -1,8 +1,7 @@
 # Mintbuntu
 
-## ====================
-   # MINTBUNTU
-## ====================
+<img width="289" height="267" alt="immagine" src="https://github.com/user-attachments/assets/806e77cf-42dc-4bf8-9bcf-0a81d73a48ac" />
+
 
 ## Introduction
 
