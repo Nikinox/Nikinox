@@ -20,12 +20,17 @@ sudo apt autoremove --purge -y
 echo "[4/9] Installing essential tools..."
 sudo apt install -y gdebi libfuse2 xfce4-screenshooter file-roller
 
-echo "[5/9] recovering personalized XFCE configuration..."
-if [ -f xfce-config.tar.gz ]; then
-    tar -xzvf xfce-config.tar.gz -C ~/
-    echo "Configurazione XFCE applicata."
+echo "[5/9] Downloading XFCE configuration..."
+
+TAR_URL="https://raw.githubusercontent.com/Nikinox/blob/main/Mintbuntu/xfce-config.tar.gz"
+
+wget -q "$TAR_URL" -O /tmp/xfce-config.tar.gz
+
+if [ -f /tmp/xfce-config.tar.gz ]; then
+    echo "Applying XFCE configuration..."
+    tar -xzvf /tmp/xfce-config.tar.gz -C ~/
 else
-    echo "  WARNING: xfce-config.tar.gz not founded!"
+    echo "WARNING: xfce-config.tar.gz not found or download failed!"
 fi
 
 echo "[6/9] leaving only one desktop space..."
