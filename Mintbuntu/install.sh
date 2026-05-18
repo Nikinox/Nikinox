@@ -7,16 +7,16 @@ echo "======================================="
 
 sleep 1
 
-echo "[1/10] Updating packages..."
+echo " Updating packages..."
 sudo apt update && sudo apt upgrade -y
 
-echo "[2/10] Installing XFCE..."
+echo " Installing XFCE..."
 sudo apt install -y xfce4 xfce4-goodies
 
-echo "[3/10] Installing essential tools..."
+echo " Installing essential tools..."
 sudo apt install -y gdebi libfuse2 xfce4-screenshooter file-roller
 
-echo "[4/10] Downloading XFCE configuration..."
+echo " Downloading XFCE configuration..."
 
 TAR_URL="https://raw.githubusercontent.com/Nikinox/Mintbuntu/main/xfce-config.tar.gz"
 
@@ -29,28 +29,31 @@ else
     echo "WARNING: xfce-config.tar.gz not found or download failed!"
 fi
 
-echo "[5/10] Setting workspace count to 1..."
+echo " Setting workspace count to 1..."
 xfconf-query -c xfwm4 -p /general/workspace_count -t int -s 1 --create
 
-echo "[6/10] Moving the panel to the bottom..."
+echo " Moving the panel to the bottom..."
 xfconf-query -c xfce4-panel -p /panels/panel-1/position -t string -s "p=8;x=0;y=0" --create
 
-echo "[7/10] Configuring screenshot shortcuts..."
+echo " Configuring screenshot shortcuts..."
 xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/Print" -t string -s "xfce4-screenshooter" --create
 xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Shift>Print" -t string -s "xfce4-screenshooter -r" --create
 xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt>Print" -t string -s "xfce4-screenshooter -w" --create
 
-echo "[8/10] Applying dark terminal theme..."
+echo " Applying dark terminal theme..."
 xfconf-query -c xfce4-terminal -p /color-background -t string -s "#000000" --create
 xfconf-query -c xfce4-terminal -p /color-foreground -t string -s "#FFFFFF" --create
 xfconf-query -c xfce4-terminal -p /color-palette -t string -s \
 "black:#000000;red:#CC0000;green:#4E9A06;yellow:#C4A000;blue:#3465A4;magenta:#75507B;cyan:#06989A;white:#D3D7CF;brightblack:#555753;brightred:#EF2929;brightgreen:#8AE234;brightyellow:#FCE94F;brightblue:#729FCF;brightmagenta:#AD7FA8;brightcyan:#34E2E2;brightwhite:#EEEEEC" --create
 xfconf-query -c xfce4-terminal -p /use-system-theme -t bool -s false --create
 
-echo "[9/10] Final cleanup before switching desktop..."
+echo ">>> Installazione ZRAM e bpytop..."
+sudo apt install -y util-linux zram-config bpytop
+
+echo " Final cleanup before switching desktop..."
 echo "XFCE fully installed and configured."
 
-echo "[10/10] Removing LXQt and Openbox..."
+echo " Removing LXQt and Openbox..."
 sudo apt remove --purge -y lxqt* openbox* obconf* pcmanfm-qt* lximage-qt*
 sudo apt autoremove --purge -y
 
