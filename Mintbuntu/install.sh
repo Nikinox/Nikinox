@@ -2,12 +2,12 @@
 
 echo "======================================="
 echo "        Mintbuntu Installer"
-echo "   transformation Lubuntu → XFCE"
+echo "   Transforming Lubuntu → XFCE"
 echo "======================================="
 
 sleep 1
 
-echo "[1/9] updating packs..."
+echo "[1/9] Updating packages..."
 sudo apt update && sudo apt upgrade -y
 
 echo "[2/9] Installing XFCE..."
@@ -22,45 +22,45 @@ sudo apt install -y gdebi libfuse2 xfce4-screenshooter file-roller
 
 echo "[5/9] Downloading XFCE configuration..."
 
-TAR_URL="https://raw.githubusercontent.com/Nikinox/blob/main/Mintbuntu/xfce-config.tar.gz"
+TAR_URL="https://raw.githubusercontent.com/Nikinox/Mintbuntu/main/xfce-config.tar.gz"
 
 wget -q "$TAR_URL" -O /tmp/xfce-config.tar.gz
 
 if [ -f /tmp/xfce-config.tar.gz ]; then
     echo "Applying XFCE configuration..."
-    tar -xzvf /tmp/xfce-config.tar.gz -C ~/
+    tar -xzf /tmp/xfce-config.tar.gz -C ~/
 else
     echo "WARNING: xfce-config.tar.gz not found or download failed!"
 fi
 
-echo "[6/9] leaving only one desktop space..."
-xfconf-query -c xfwm4 -p /general/workspace_count -n -t int -s 1
+echo "[6/9] Setting workspace count to 1..."
+xfconf-query -c xfwm4 -p /general/workspace_count -t int -s 1 --create
 
-echo "[7/9] moving the panel down..."
-# Pannello principale = panel-1 (come nel tuo sistema)
-xfconf-query -c xfce4-panel -p /panels/panel-1/position -n -t string -s "p=8;x=0;y=0"
+echo "[7/9] Moving the panel to the bottom..."
+# Only works if panel-1 exists (your config creates it)
+xfconf-query -c xfce4-panel -p /panels/panel-1/position -t string -s "p=8;x=0;y=0" --create
 
 echo "[8/9] Configuring screenshot shortcuts..."
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/Print" -n -t string -s "xfce4-screenshooter"
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Shift>Print" -n -t string -s "xfce4-screenshooter -r"
-xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt>Print" -n -t string -s "xfce4-screenshooter -w"
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/Print" -t string -s "xfce4-screenshooter" --create
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Shift>Print" -t string -s "xfce4-screenshooter -r" --create
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt>Print" -t string -s "xfce4-screenshooter -w" --create
 
 echo "[9/9] Applying dark terminal theme..."
 
-# sets black background
-xfconf-query -c xfce4-terminal -p /color-background -n -t string -s "#000000"
+# Background
+xfconf-query -c xfce4-terminal -p /color-background -t string -s "#000000" --create
 
-# sets white text
-xfconf-query -c xfce4-terminal -p /color-foreground -n -t string -s "#FFFFFF"
+# Foreground
+xfconf-query -c xfce4-terminal -p /color-foreground -t string -s "#FFFFFF" --create
 
-# enables the style palette 'Linux'
-xfconf-query -c xfce4-terminal -p /color-palette -n -t string -s "black:#000000;red:#CC0000;green:#4E9A06;yellow:#C4A000;blue:#3465A4;magenta:#75507B;cyan:#06989A;white:#D3D7CF;brightblack:#555753;brightred:#EF2929;brightgreen:#8AE234;brightyellow:#FCE94F;brightblue:#729FCF;brightmagenta:#AD7FA8;brightcyan:#34E2E2;brightwhite:#EEEEEC"
+# Linux palette (correct format)
+xfconf-query -c xfce4-terminal -p /color-palette -t string -s \
+"black:#000000;red:#CC0000;green:#4E9A06;yellow:#C4A000;blue:#3465A4;magenta:#75507B;cyan:#06989A;white:#D3D7CF;brightblack:#555753;brightred:#EF2929;brightgreen:#8AE234;brightyellow:#FCE94F;brightblue:#729FCF;brightmagenta:#AD7FA8;brightcyan:#34E2E2;brightwhite:#EEEEEC" --create
 
-# Disables system theme (essential to get custom colors)
-xfconf-query -c xfce4-terminal -p /use-system-theme -n -t bool -s false
-
+# Disable system theme
+xfconf-query -c xfce4-terminal -p /use-system-theme -t bool -s false --create
 
 echo "======================================="
-echo " Mintbuntu succesfully installed!"
+echo " Mintbuntu successfully installed!"
 echo " Reboot to apply everything."
 echo "======================================="
