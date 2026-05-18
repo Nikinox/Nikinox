@@ -29,6 +29,10 @@ curl -s https://raw.githubusercontent.com/Nikinox/Nikinox/main/Mintbuntu/install
 - `install.sh` — installs the stuff and the .tar.gz
 - `xfce-config.tar.gz` — configures the stuff installed with install.sh
 
+# ⚠️ Disclaimer
+it might not work, 
+use it at YOUR risk.
+
 ## Why I built this
 
 I just wanted to speed up my Lubuntu and make it with less lag and a little better.
