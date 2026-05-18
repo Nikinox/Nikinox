@@ -55,6 +55,7 @@ echo "XFCE fully installed and configured."
 
 echo " Removing LXQt and Openbox..."
 sudo apt remove --purge -y lxqt* openbox* obconf* pcmanfm-qt* lximage-qt*
+sudo apt remove lxqt-archiver
 sudo apt autoremove --purge -y
 
 echo "LXQt removed. Rebooting now..."
