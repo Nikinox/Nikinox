@@ -28,7 +28,7 @@ I like turning ideas into working projects and trying to learn something new eve
 
 🔧 Dev Stats
 
-    Total projects built: 19
+    Total projects built: 22(counting prototypes and experimets)
 
     Years of coding: 5 months
 
