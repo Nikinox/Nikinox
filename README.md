@@ -20,16 +20,14 @@ I like turning ideas into working projects and trying to learn something new eve
 
 📚 Currently Working On
 
-    Developing a new Tycoon game (no spoilers yet)
-
-    Trying to build different tools
-
-    Improving documentation and project structure
+improving my already built projects.
 
 🔧 Dev Stats
 
-    Total projects built: 22(counting prototypes and experimets)
+    Total projects built: 22(counting prototypes, subprojects and experimets)
 
+    Real projects built: 15
+    
     Years of coding: 5 months
 
         (2.6 years if we count Scratch)
