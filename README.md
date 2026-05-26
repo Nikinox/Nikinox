@@ -24,7 +24,7 @@ improving my already built projects.
 
 🔧 Dev Stats
 
-    Total projects built: 22(counting prototypes, subprojects and experimets)
+    Total projects built: 22(including prototypes, subprojects and experimets)
 
     Real projects built: 15
     
