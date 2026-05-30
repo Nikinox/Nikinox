@@ -52,19 +52,37 @@ xfconf-query -c xfce4-terminal -p /use-system-theme -t bool -s false --create
 echo ">>> Installing ZRAM and bpytop..."
 sudo apt install -y util-linux zram-config bpytop
 
+ask_yes_no() {
+    local prompt="$1"
+    local answer
+
+    while true; do
+        read -p "$prompt (y/n): " answer
+        case "$answer" in
+            y|Y) return 0 ;;
+            n|N) return 1 ;;
+            *) echo "Invalid input. Please type y or n." ;;
+        esac
+    done
+}
+
 echo " Asking about disabling optional services..."
 
-read -p "Disable Bluetooth service? (y/N): " ans
-[[ $ans == "y" ]] && sudo systemctl disable --now bluetooth.service
+if ask_yes_no "Disable Bluetooth service?"; then
+    sudo systemctl disable --now bluetooth.service
+fi
 
-read -p "Disable Avahi (network discovery)? (y/N): " ans
-[[ $ans == "y" ]] && sudo systemctl disable --now avahi-daemon.service
+if ask_yes_no "Disable Avahi (network discovery)?"; then
+    sudo systemctl disable --now avahi-daemon.service
+fi
 
-read -p "Disable CUPS (printing)? (y/N): " ans
-[[ $ans == "y" ]] && sudo systemctl disable --now cups.service
+if ask_yes_no "Disable CUPS (printing)?"; then
+    sudo systemctl disable --now cups.service
+fi
 
-read -p "Disable ModemManager (4G dongles)? (y/N): " ans
-[[ $ans == "y" ]] && sudo systemctl disable --now ModemManager.service
+if ask_yes_no "Disable ModemManager (4G dongles)?"; then
+    sudo systemctl disable --now ModemManager.service
+fi
 
 echo " Final cleanup before switching desktop..."
 echo "XFCE fully installed and configured."
