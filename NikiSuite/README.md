@@ -166,7 +166,7 @@ Originally, it included only:
 
 The name NikiSuite comes from merging the creator’s nickname Nikinox with the word Suite.
 
-🏳️ Project Status: Archived
+### 🏳️ Project Status: Archived
 
 NikiSuite was my first large, comprehensive project, a journey that taught me how to organize code, structure an ecosystem of tools, and pursue an idea over time. Today, I consider NikiSuite a finished project: I won't be adding any new features and I don't plan any further updates.
 
