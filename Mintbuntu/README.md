@@ -31,7 +31,7 @@ curl -s https://raw.githubusercontent.com/Nikinox/Nikinox/main/Mintbuntu/install
 
 ## How the files work
 - `install.sh` — installs the stuff and the .tar.gz
-- `xfce-config.tar.gz` — configures the stuff installed with install.sh
+- `xfce-config.tar.gz` — has the configuration of the environment that install.sh applies
 
 # ⚠️ Disclaimer
 it might not work, 
