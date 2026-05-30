@@ -11,7 +11,7 @@ Mintbuntu has the goal to make Lubuntu faster and better adding some Mint XFCE f
 - The Desktop is lighter and more stable 
 - Some basic split screen funtionalities
 - all XFCE functionalities
-- ZRAM for a little bit of extra RAM
+- ZRAM for a little bit of extra virtuale RAM but faster
 - bpytop as a CUI task manager
 - optional turn off of services not very used
 - default sync of the hour(i don't know why my Lubuntu did not sync the hour automatically)
