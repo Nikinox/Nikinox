@@ -7,6 +7,8 @@ echo "======================================="
 
 sleep 1
 
+sudo timedatectl set-ntp true
+
 echo " Updating packages..."
 sudo apt update && sudo apt upgrade -y
 
