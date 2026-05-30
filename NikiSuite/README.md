@@ -165,4 +165,9 @@ Originally, it included only:
 …and everything ran in the terminal.
 
 The name NikiSuite comes from merging the creator’s nickname Nikinox with the word Suite.
-A logo does not exist yet — maybe in the future.
+
+🏳️ Project Status: Archived
+
+NikiSuite was my first large, comprehensive project, a journey that taught me how to organize code, structure an ecosystem of tools, and pursue an idea over time. Today, I consider NikiSuite a finished project: I won't be adding any new features and I don't plan any further updates.
+
+However, it remains a special project for me, a starting point that contributed to my growth as a developer.
