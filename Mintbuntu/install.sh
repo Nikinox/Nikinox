@@ -47,7 +47,7 @@ xfconf-query -c xfce4-terminal -p /color-palette -t string -s \
 "black:#000000;red:#CC0000;green:#4E9A06;yellow:#C4A000;blue:#3465A4;magenta:#75507B;cyan:#06989A;white:#D3D7CF;brightblack:#555753;brightred:#EF2929;brightgreen:#8AE234;brightyellow:#FCE94F;brightblue:#729FCF;brightmagenta:#AD7FA8;brightcyan:#34E2E2;brightwhite:#EEEEEC" --create
 xfconf-query -c xfce4-terminal -p /use-system-theme -t bool -s false --create
 
-echo ">>> Installazione ZRAM e bpytop..."
+echo ">>> Installing ZRAM and bpytop..."
 sudo apt install -y util-linux zram-config bpytop
 
 echo " Final cleanup before switching desktop..."
