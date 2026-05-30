@@ -2,6 +2,7 @@
 
 A simple yet powerful interactive prompt generator for the terminal, designed to help users build structured, high‑quality prompts for conversational AIs.
 The program guides the user step by step, collects all required information, and outputs a complete prompt ready to paste anywhere.
+
 🚀 Key Features
 
   Interactive loop: the program keeps generating prompts until the user decides to stop.
