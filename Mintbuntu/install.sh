@@ -14,7 +14,7 @@ echo " Installing XFCE..."
 sudo apt install -y xfce4 xfce4-goodies
 
 echo " Installing essential tools..."
-sudo apt install -y gdebi libfuse2 xfce4-screenshooter file-roller
+sudo apt install -y libfuse2 xfce4-screenshooter file-roller
 
 echo " Downloading XFCE configuration..."
 
