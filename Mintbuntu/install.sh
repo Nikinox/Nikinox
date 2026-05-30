@@ -50,6 +50,20 @@ xfconf-query -c xfce4-terminal -p /use-system-theme -t bool -s false --create
 echo ">>> Installing ZRAM and bpytop..."
 sudo apt install -y util-linux zram-config bpytop
 
+echo " Asking about disabling optional services..."
+
+read -p "Disable Bluetooth service? (y/N): " ans
+[[ $ans == "y" ]] && sudo systemctl disable --now bluetooth.service
+
+read -p "Disable Avahi (network discovery)? (y/N): " ans
+[[ $ans == "y" ]] && sudo systemctl disable --now avahi-daemon.service
+
+read -p "Disable CUPS (printing)? (y/N): " ans
+[[ $ans == "y" ]] && sudo systemctl disable --now cups.service
+
+read -p "Disable ModemManager (4G dongles)? (y/N): " ans
+[[ $ans == "y" ]] && sudo systemctl disable --now ModemManager.service
+
 echo " Final cleanup before switching desktop..."
 echo "XFCE fully installed and configured."
 
