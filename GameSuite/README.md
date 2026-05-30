@@ -7,7 +7,8 @@ At the moment, the collection includes:
 
     Tic Tac Toe — a simple, "command-line" based implementation of the classic game using Python and Tkinter.
 
-More games will be added over time as the suite evolves.
+### 🏳️ Project status: Archived
+There aren't updates planned for now.
 
 Preview:
 <img width="668" height="458" alt="immagine" src="https://github.com/user-attachments/assets/8dd7b06b-a990-4a91-a665-bc4771bba11c" />
