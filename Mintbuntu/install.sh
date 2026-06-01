@@ -55,6 +55,7 @@ xfconf-query -c xfce4-terminal -p /use-system-theme -t bool -s false --create
 
 echo ">>> Installing ZRAM and bpytop..."
 sudo apt install -y util-linux zram-config bpytop
+sudo systemctl enable --now zram-config
 
 ask_yes_no() {
     local prompt="$1"
