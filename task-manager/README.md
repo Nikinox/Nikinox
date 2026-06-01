@@ -1,1 +1,1 @@
-
+I just tried to build a task manager because I found the Lubuntu's one incomprehensible, but now that I switched, I no longer need to build that and this is now just an attempt of building a CLI resource monitor.
