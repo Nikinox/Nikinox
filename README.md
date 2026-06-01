@@ -10,29 +10,17 @@ I like turning ideas into working projects and trying to learn something new eve
 
 🖥️ Tools & Stack
 
-    Mainly working with Python
+    Using Python for most of my projects
 
+    Exploring Bash to build custom Linux installers
+    
     Using Visual Studio Code as my primary editor
 
     Exploring game development with TurboWarp (at least until I learn Unity or engines like it)
 
-    Learning by building, experimenting, and iterating
-
 📚 Currently Working On
 
-improving my already built projects.
-
-🔧 Dev Stats
-
-    Total projects built: 22(including prototypes, subprojects and experimets)
-
-    Real projects built: 15
-    
-    Years of coding: 5 months
-
-        (2.6 years if we count Scratch)
-
-    Favorite stack: Python
+Testing Mintbuntu and working on an Ubuntu Edition.
 
 🧠 Philosophy: 
 
