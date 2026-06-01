@@ -1,4 +1,13 @@
 #include<iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <unordered_map>
+#include <filesystem>
+#include <chrono>
+#include <thread>
+#include <unistd.h>
+
 using namespace std;
 int read_cpu();
 int read_ram();
