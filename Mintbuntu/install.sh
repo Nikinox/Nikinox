@@ -37,6 +37,10 @@ xfconf-query -c xfwm4 -p /general/workspace_count -t int -s 1 --create
 echo " Moving the panel to the bottom..."
 xfconf-query -c xfce4-panel -p /panels/panel-1/position -t string -s "p=8;x=0;y=0" --create
 
+echo " Setting the bar to the bottom... "
+mkdir -p ~/.config/xfce4/panel/
+touch ~/.config/xfce4/panel/whiskermenu-1.rc
+
 echo " Configuring screenshot shortcuts..."
 xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/Print" -t string -s "xfce4-screenshooter" --create
 xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Shift>Print" -t string -s "xfce4-screenshooter -r" --create
