@@ -72,14 +72,6 @@ This keeps everything organized while making individual projects discoverable.
 
 🔥 Highlighted Projects
 
-🧪 Sheep Shooter Prototype
-
-An experimental shooter prototype — archived but part of my journey.
-
-🔐 Password Generator
-
-A NikiSuite module for generating passwords.
-
 🐧  Mintbuntu installer
 An installer to make Lubuntu lighter and better.
 
