@@ -80,17 +80,8 @@ An experimental shooter prototype — archived but part of my journey.
 
 A NikiSuite module for generating passwords.
 
-🛣️ Roadmap
-
-    Finish the Tycoon
-
-    Create a dedicated GitHub Page for the game
-
-    Expand NikiSuite with new modules
-
-    Improve documentation and structure
-
-    Add more bridge repos for key projects
+🐧  Mintbuntu installer
+An installer to make Lubuntu lighter and better.
 
 🧭 How to Navigate This Repo
 
