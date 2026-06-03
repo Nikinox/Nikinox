@@ -13,4 +13,4 @@ while True:
 
     result = int(input())
 
-    print("correct" if value + value1 == result else exit())
+    print("correct" if value + value1 == result else exit("wrong"))
