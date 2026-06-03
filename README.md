@@ -49,7 +49,9 @@ Every folder is a piece of my growth as a developer.
 🧰 NikiSuite
 
 My personal suite of Python tools and utilities.
-A constantly evolving toolbox that reflects my coding style and workflow.
+
+🐧 Mintbuntu
+My installer to improve Lubuntu and make it more stabile, lighter and with some extra functionalities.
 
 Prototypes, experiments, and full games.
 
