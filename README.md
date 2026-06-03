@@ -50,7 +50,6 @@ Every folder is a piece of my growth as a developer.
 
 My personal suite of Python tools and utilities.
 A constantly evolving toolbox that reflects my coding style and workflow.
-🎮 Games
 
 Prototypes, experiments, and full games.
 
