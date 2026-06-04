@@ -15,6 +15,6 @@ while True:
 
     result = int(input())
 
-    print("correct" if value + value1 == result else exit(f"wrong, your streak was: {streak}"))
-
     streak += (value + value1 == result) # if true +1, else 0, so i save an if statement and the code is shorter
+
+    print(f"correct, streak: {streak}" if value + value1 == result else exit(f"wrong, your streak was: {streak}"))
