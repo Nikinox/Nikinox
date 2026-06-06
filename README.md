@@ -16,11 +16,11 @@ I like turning ideas into working projects and trying to learn something new eve
     
     Using Visual Studio Code as my primary editor
 
-    Exploring game development with TurboWarp (at least until I learn Unity or engines like it)
-
 📚 Currently Working On
 
 A tool that tracks the Github's analitycs of a repo and saves them into a database.
+
+A tool that's a sort of "language powerbar" for repos.
 
 🧠 Philosophy: 
 
