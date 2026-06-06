@@ -1,1 +1,102 @@
+#!/bin/bash
 
+echo "======================================="
+echo "        Mintbuntu Installer Ubuntu Edition"
+echo "   Transforming Ubuntu → XFCE"
+echo "======================================="
+
+sleep 1
+
+sudo timedatectl set-ntp true
+
+echo " Updating packages..."
+sudo apt update && sudo apt upgrade -y
+
+echo " Installing XFCE..."
+sudo apt install -y xfce4 xfce4-goodies
+
+echo " Installing LightDM..."
+sudo apt install -y lightdm lightdm-gtk-greeter
+sudo dpkg-reconfigure lightdm
+
+echo " Installing essential tools..."
+sudo apt install -y libfuse2 xfce4-screenshooter file-roller
+
+echo " Downloading XFCE configuration..."
+
+TAR_URL="https://raw.githubusercontent.com/Nikinox/Mintbuntu/main/xfce-config.tar.gz"
+
+wget -q "$TAR_URL" -O /tmp/xfce-config.tar.gz
+
+if [ -f /tmp/xfce-config.tar.gz ]; then
+    echo "Applying XFCE configuration..."
+    tar -xzf /tmp/xfce-config.tar.gz -C ~/
+else
+    echo "WARNING: xfce-config.tar.gz not found or download failed!"
+fi
+
+echo " Setting workspace count to 1..."
+xfconf-query -c xfwm4 -p /general/workspace_count -t int -s 1 --create
+
+echo " Moving the panel to the bottom..."
+xfconf-query -c xfce4-panel -p /panels/panel-1/position -t string -s "p=8;x=0;y=0" --create
+
+echo " Setting the bar to the bottom... "
+mkdir -p ~/.config/xfce4/panel/
+touch ~/.config/xfce4/panel/whiskermenu-1.rc
+
+echo " Configuring screenshot shortcuts..."
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/Print" -t string -s "xfce4-screenshooter" --create
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Shift>Print" -t string -s "xfce4-screenshooter -r" --create
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt>Print" -t string -s "xfce4-screenshooter -w" --create
+
+echo " Applying dark terminal theme..."
+xfconf-query -c xfce4-terminal -p /color-background -t string -s "#000000" --create
+xfconf-query -c xfce4-terminal -p /color-foreground -t string -s "#FFFFFF" --create
+xfconf-query -c xfce4-terminal -p /color-palette -t string -s \
+"black:#000000;red:#CC0000;green:#4E9A06;yellow:#C4A000;blue:#3465A4;magenta:#75507B;cyan:#06989A;white:#D3D7CF;brightblack:#555753;brightred:#EF2929;brightgreen:#8AE234;brightyellow:#FCE94F;brightblue:#729FCF;brightmagenta:#AD7FA8;brightcyan:#34E2E2;brightwhite:#EEEEEC" --create
+xfconf-query -c xfce4-terminal -p /use-system-theme -t bool -s false --create
+
+echo ">>> Installing ZRAM and bpytop..."
+sudo apt install -y util-linux zram-config bpytop
+sudo systemctl enable --now zram-config
+
+ask_yes_no() {
+    local prompt="$1"
+    local answer
+
+    while true; do
+        read -p "$prompt (y/n): " answer
+        case "$answer" in
+            y|Y) return 0 ;;
+            n|N) return 1 ;;
+            *) echo "Invalid input. Please type y or n." ;;
+        esac
+    done
+}
+echo " Asking about disabling optional services..."
+
+if ask_yes_no "Disable Bluetooth service?"; then
+    sudo systemctl disable --now bluetooth.service
+fi
+
+if ask_yes_no "Disable Avahi (network discovery)?"; then
+    sudo systemctl disable --now avahi-daemon.service
+fi
+
+if ask_yes_no "Disable CUPS (printing)?"; then
+    sudo systemctl disable --now cups.service
+fi
+
+if ask_yes_no "Disable ModemManager (4G dongles)?"; then
+    sudo systemctl disable --now ModemManager.service
+fi
+
+echo "XFCE fully installed and configured."
+
+echo " Removing GNOME..."
+sudo apt remove --purge -y ubuntu-desktop gnome-shell gdm3 gnome-control-center gnome-settings-daemon mutter nautilus
+sudo apt autoremove --purge -y
+
+echo "GNOME removed. Rebooting now..."
+sudo reboot
