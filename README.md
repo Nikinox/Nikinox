@@ -20,7 +20,7 @@ I like turning ideas into working projects and trying to learn something new eve
 
 📚 Currently Working On
 
-Testing Mintbuntu and working on an Ubuntu Edition.
+A tool that tracks the Github's analitycs of a repo and saves them into a database.
 
 🧠 Philosophy: 
 
