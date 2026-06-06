@@ -1,5 +1,7 @@
 # Mintbuntu Ubuntu Edition v1.0 (beta)
 
+<img width="289" height="267" alt="immagine" src="https://github.com/user-attachments/assets/e4ddced6-fa1c-41e5-90bd-8442bfbd0db0" />
+
 ## Introduction
 
 Mintbuntu has the goal to make Lubuntu faster and better adding some Mint XFCE funtionalities thanks to the XFCE desktop environment.
