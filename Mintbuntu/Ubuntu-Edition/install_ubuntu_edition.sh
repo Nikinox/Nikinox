@@ -2,7 +2,7 @@
 
 echo "======================================="
 echo "        Mintbuntu Installer Ubuntu Edition"
-echo "   Transforming Ubuntu → XFCE"
+echo "            Transforming Ubuntu → XFCE"
 echo "======================================="
 
 sleep 1
