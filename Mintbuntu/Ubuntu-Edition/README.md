@@ -20,7 +20,7 @@ Mintbuntu has the goal to make Lubuntu faster and better adding some Mint XFCE f
 
 Just copy the command below:
 
-curl -s https://raw.githubusercontent.com/Nikinox/Nikinox/main/Mintbuntu/install.sh | bash
+curl -s https://raw.githubusercontent.com/Nikinox/Nikinox/refs/heads/main/Mintbuntu/Ubuntu-Edition/install_ubuntu_edition.sh | bash
 
  Method 2 — manual installation
 1. Clone the directory
