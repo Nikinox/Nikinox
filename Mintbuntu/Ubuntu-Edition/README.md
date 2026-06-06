@@ -33,7 +33,9 @@ curl -s https://raw.githubusercontent.com/Nikinox/Nikinox/main/Mintbuntu/install
 # ⚠️ Disclaimer
 it might not work, 
 use it at YOUR risk.
+
 It's still untested.
+
 I am NOT responsible for any issues if it breaks something.
 
 ## Why I built this
