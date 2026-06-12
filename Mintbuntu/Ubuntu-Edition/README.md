@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Mintbuntu has the goal to make Lubuntu faster and better adding some Mint XFCE funtionalities thanks to the XFCE desktop environment.
+Mintbuntu Ubuntu Edition has the goal to make Ubuntu faster and better adding some Mint XFCE funtionalities thanks to the XFCE desktop environment.
 
 ## Main functionalities
 - The Desktop is lighter and more stable 
