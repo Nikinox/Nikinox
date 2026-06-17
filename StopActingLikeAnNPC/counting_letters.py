@@ -1,2 +1,2 @@
 while True:
-  print(len(word = input("insert word:\n")))
+  print(len(input("insert word:\n")))
