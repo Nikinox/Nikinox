@@ -1,2 +1,1 @@
-while True:
-    print(input("insert the text:\n")[::-1])
+while True: print(input("insert the text:\n")[::-1])
