@@ -72,8 +72,7 @@ This keeps everything organized while making individual projects discoverable.
 
 🔥 Highlighted Projects
 
-🐧  Mintbuntu installer
-An installer to make Lubuntu lighter and better.
+🐧  Mintbuntu installer - An installer to make Lubuntu lighter and better.
 
 🧭 How to Navigate This Repo
 
