@@ -20,7 +20,7 @@ Mintbuntu Ubuntu Edition has the goal to make Ubuntu faster and better adding so
 
 Just copy the command below:
 
-curl -s https://raw.githubusercontent.com/Nikinox/Nikinox/refs/heads/main/Mintbuntu/Ubuntu-Edition/install_ubuntu_edition.sh | bash
+    curl -s https://raw.githubusercontent.com/Nikinox/Nikinox/refs/heads/main/Mintbuntu/Ubuntu-Edition/install_ubuntu_edition.sh | bash
 
  Method 2 — manual installation
 1. Clone the directory
