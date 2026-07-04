@@ -50,8 +50,7 @@ Every folder is a piece of my growth as a developer.
 
 My personal suite of Python tools and utilities.
 
-🐧 Mintbuntu
-My installer to improve Lubuntu and make it more stabile, lighter and with some extra functionalities.
+🐧 Mintbuntu - My installer to improve Lubuntu and make it more stabile, lighter and with some extra functionalities.
 
 Prototypes, experiments, and full games.
 
