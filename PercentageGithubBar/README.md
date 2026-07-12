@@ -10,4 +10,4 @@ The default Github bar in every repo calculates the percentages of a language wi
 
 What it does differently:
 
-    It doesn't require any Github Personal Access Token.
+**It doesn't require any Github Personal Access Token.**
