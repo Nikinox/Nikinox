@@ -1,6 +1,6 @@
-🌐 Nikinox Mega‑Repo
+🌐 This Mega‑Repo
 
-    A living laboratory of tools, games, experiments, and personal development.
+    A laboratory of tools, games, experiments, and personal development.
     This repository represents my journey as a young developer — everything I build, learn, and improve lives here.
 
 👋 Hi, I'm Nikinox
@@ -18,13 +18,7 @@ I like turning ideas into working projects and trying to learn something new eve
 
 📚 Currently Working On
 
-A tool that tracks the Github's analitycs of a repo and saves them into a database.
-
-A tool that's a sort of "language powerbar" for repos.
-
-🧠 Philosophy: 
-
-Keep trying. Keep building. Keep learning. Keep improving.
+nothing
 
 🧩 What This Mega‑Repo Is
 
@@ -39,8 +33,6 @@ It contains:
     Experiments & concepts
 
     Documentation
-
-    Long‑term projects like the NikiSuite
 
 Every folder is a piece of my growth as a developer.
   
