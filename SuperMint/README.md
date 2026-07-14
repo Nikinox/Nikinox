@@ -6,5 +6,11 @@
 ## What this project is:
 This project is an installer that installs all the tools I use in Mint as a programmer.
 
+## How to install it
+
+Just copy the command below:
+
+        curl -s https://raw.githubusercontent.com/Nikinox/Nikinox/main/SuperMint/setup.sh | bash
+
 ## Why I built this:
 I wanted to have my setup portable and repeatable.
