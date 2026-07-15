@@ -122,9 +122,7 @@ To preserve the identity of the suite:
 
 Super simple:
 
--Copy the code
-
--Save it into a .py file
+-Download the .py file
 
 -Run it
 
