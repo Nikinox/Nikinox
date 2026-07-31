@@ -2,7 +2,6 @@
 
     A laboratory of tools, games, experiments, and personal development.
     This repository represents my journey as a young developer — everything I build, learn, and improve lives here.
-
 👋 Hi, I'm Nikinox
 
 I'm a teenager passionate about programming and building things from scratch — from the core logic to the final code.
