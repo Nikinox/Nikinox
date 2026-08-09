@@ -15,7 +15,7 @@ I already did another suite a while ago, the NikiSuite, the system design behind
 
     All the programs are funcctions associated to buttons and windows that depend on the main one, meaning that if the main window closes, everything closes
 
-<img width="304" height="159" alt="immagine" src="https://github.com/user-attachments/assets/56b2e7a5-6afb-48ec-8dbb-5fef223696f5" />
+<img width="908" height="308" alt="immagine" src="https://github.com/user-attachments/assets/d89db110-296e-46cd-a0a1-6091908df54e" />
 
 ## What changes
 Instead of using input bars to choose options, I tried to use some sort of buttons 
