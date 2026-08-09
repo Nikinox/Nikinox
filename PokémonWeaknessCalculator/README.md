@@ -9,3 +9,12 @@ However, it's not the best way to find dual-type matchups, sure you can look to 
 It allows you to calculate quickly the matchups againist every type.
 
 Sure, you can watch the Pokémon infos somewhere else, but there are some combos that never appeared for now.
+
+And it's super fast to use.
+
+It's simple and portable.
+
+## Approach used
+Zero dependencies.
+
+And it's basically an array multiplication.
