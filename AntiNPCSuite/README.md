@@ -3,7 +3,7 @@
 **A collection of tools designed to stop you from doing little pointless tasks with Python**
 
 ## What it is
-It's a program that contains four other little scripts inside that are inside the STALAN collection (Stop Acting Like An NPC), including:
+It's a program that contains four other little scripts inside that are inside the STALAN collection (Stop Acting Like An NPC: https://github.com/Nikinox/Nikinox/tree/main/StopActingLikeAnNPC), including:
 
 - A tool to calculate the lenght of a word/sentence
 - A tool to reverse text
