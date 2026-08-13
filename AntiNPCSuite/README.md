@@ -1,4 +1,4 @@
-# ANS
+# AN Suite
 ## Anti NPC Suite
 **A collection of tools designed to stop you from doing little pointless tasks with Python**
 
