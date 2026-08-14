@@ -21,7 +21,7 @@ I already did another suite a while ago, the NikiSuite, the system design behind
 Instead of using input bars to choose options, I tried to use some sort of buttons 
 that change their color and text to show the setting they're currently in.
 
-This improves both UI and UX.
+This improves both UI and UX and reduces the possibility of input errors.
 
 ## Stack of the project
 I used like in most of my projects Python 3 and its standard libraries, 
@@ -30,4 +30,4 @@ in this project I used only tkinter.
 ## Possible updates
 A webapp version of the project, written in HTML, CSS and Javascript.
 
-Different language versions of the app.
+Different language versions of the app (idioms, not programming languages).
