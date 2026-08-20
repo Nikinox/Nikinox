@@ -18,3 +18,6 @@ It's simple and portable.
 Zero dependencies.
 
 And it's basically an array multiplication.
+So it works like this:
+
+<img width="777" height="662" alt="WhatsApp Image 2026-08-09 at 20 20 31" src="https://github.com/user-attachments/assets/1adc83f4-27b8-4332-af01-f65fae313e80" />
