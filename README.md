@@ -1,12 +1,3 @@
-🌐 This Mega‑Repo
-
-    A laboratory of tools, games, experiments, and personal development.
-    This repository represents my journey as a young developer — everything I build, learn, and improve lives here.
-👋 Hi, I'm Nikinox
-
-I'm a teenager passionate about programming and building things from scratch — from the core logic to the final code.
-I like turning ideas into working projects and trying to learn something new every time I build.
-
 🖥️ Tools & Stack
 
     Using Python for most of my projects
@@ -25,7 +16,7 @@ This repository is not a single project — it’s my entire development laborat
 
 It contains:
 
-    Tools & utilities
+    Tools
 
     Games & prototypes
 
@@ -45,7 +36,7 @@ My personal suite of Python tools and utilities.
 
 Prototypes, experiments, and full games.
 
-🛠️ Tools & Utilities
+🛠️ Tools
 
 Small but useful scripts that automate tasks.
 
